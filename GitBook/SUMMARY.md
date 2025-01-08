@@ -1,5 +1,6 @@
 # Efnisyfirlit
-
+* [Heim](README.md)
+ 
 ## Heimsmynd hermunar
 * [Hermilíkön](simulation_overview/simulation_models.md)
 * [Hermilíkanaaðferðir](simulation_overview/simulation_methods.md)
