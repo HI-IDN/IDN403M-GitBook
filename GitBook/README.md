@@ -85,5 +85,19 @@ Kennari námskeiðsins eru Helga Ingimundardóttir, Tómas Philip Rúnarsson og 
         <td></td>
         <td><a href="model_testing/model_validation.md">model_validation.md</a></td>
       </tr>
+      <tr>
+        <td><strong>Eindalíkön</strong></td>
+        <td>Uppbygging og sýnidæmi</td>
+        <td><a href=".gitbook/assets/agent_models.png">agent_models.png</a></td>
+        <td></td>
+        <td><a href="agent_models/agent_based_models.md">agent_based_models.md</a></td>
+      </tr>
+      <tr>
+        <td><strong>Kvik kerfislíkön</strong></td>
+        <td>Kerfishugsun og sýnidæmi</td>
+        <td><a href=".gitbook/assets/system_dynamics.png">system_dynamics.png</a></td>
+        <td></td>
+        <td><a href="system_dynamics/system_dynamics.md">system_dynamics.md</a></td>
+      </tr>
     </tbody>
 </table>
