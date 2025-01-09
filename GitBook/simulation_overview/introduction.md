@@ -60,7 +60,7 @@ Til að hermun sem lausnaraðferð sé skiljanleg þarf að byrja á að útský
 > til að veita nemendum innsýn í þessar aðferðir og hvernig þær tengjast hermun almennt.
 > Aðaláherslan verður hins vegar á stakræna atburðahermun og tengdar aðferðir.
 
-## Heimildir
+# Heimildir
 
 - **Borshchev, A.** (2013). *The Big Book of Simulation Modeling: Multimethod Modeling with Anylogic
   6*. AnyLogic North America. ISBN: 978-0989573177.
