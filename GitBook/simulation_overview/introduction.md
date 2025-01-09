@@ -45,20 +45,26 @@ nákvæmar lausnir sem og hermun.
 # Uppbygging kvers
 
 Markmiðið með þessu kveri er að kynna hermun, gagnsemi hennar og hvernig á að framkvæma hana. Í raun
-þarf að fara í gegnum alla fjóra heima sem lýst er í heimildum [Mitroff, 1974](#heimildir) sem og 
+þarf að fara í gegnum alla fjóra heima sem lýst er í heimildum [Mitroff, 1974](#heimildir) sem og
 allar sex aðgerðirnar. Þar sem þetta er inngangur er þetta kver takmarkað við þrjá heima (hugtaka-,
 vísinda- og lausnarheima) og þrjár aðgerðir (hugtakamótun, líkanagerð og líkanalausn).
 
 Til að hermun sem lausnaraðferð sé skiljanleg þarf að byrja á að útskýra hvernig vísindalíkan lítur
 út og virkar.
 
-Næsti kafli fjallar um stakræna atburðahermun og hvernig sá heimur virkar. Restin af þessu kveri
-fæst við stakræna atburðahermun að frádregnum síðust tveimur köflum sem kynna eindalíkön og kvik
-kerfislíkön.
+> Næsti kafli fjallar um 
+> [stakræna atburðahermun](../discrete_event_simulation/discrete_event_components.md) og hvernig sá
+> heimur virkar. Restin af þessu kveri fjallar að mestu leyti um stakræna atburðahermun, sem er 
+> helsta áhersla námskeiðsins. [Eindalíkön](../agent_models/agent_based_models.md) og
+> [kvik kerfislíkön](../system_dynamics/system_dynamics.md) verða einnig kynnt, en aðeins lauslega
+> til að veita nemendum innsýn í þessar aðferðir og hvernig þær tengjast hermun almennt.
+> Aðaláherslan verður hins vegar á stakræna atburðahermun og tengdar aðferðir.
 
 ## Heimildir
-- **Borshchev, A.** (2013). *The Big Book of Simulation Modeling: Multimethod Modeling with Anylogic 6*. AnyLogic North America. ISBN: 978-0989573177.
+
+- **Borshchev, A.** (2013). *The Big Book of Simulation Modeling: Multimethod Modeling with Anylogic
+  6*. AnyLogic North America. ISBN: 978-0989573177.
 - **Law, A. M.** (2007). *Simulation Modeling and Analysis* (4th ed.). McGraw-Hill.
-- **Mitroff, I. I., Betz, F., Pondy, L. R., & Sagasti, F.** (1974). *On managing science in the 
+- **Mitroff, I. I., Betz, F., Pondy, L. R., & Sagasti, F.** (1974). *On managing science in the
   systems age: two schemas for the study of science as a whole systems phenomenon*.                
   Interfaces, 4 (3), 46–58. ISSN: 00922102.
