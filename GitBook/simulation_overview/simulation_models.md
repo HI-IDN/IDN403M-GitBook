@@ -51,5 +51,5 @@ Hvernig atburðir eru tengdir hefur áhrif á flækjustig kerfisins:
 
 Líkön sem eru kvik, stakræn og slembin eru nefnd stakræn atburðahermunarlíkön *(e. discrete-event simulation models)*. Þessi líkön eru mikilvæg fyrir aðferðir sem byggja á atburðum, þar sem breytingar í kerfinu eiga sér stað þegar ákveðnir atburðir gerast.
 
-![Raunheimur og líkanaheimur](figs/Likanaheimur-raunheimur.jpg)
-*Mynd: Raunheimur og líkanaheimur - þýðing höfundar úr [Borshchev, 2013](#refs)*
+![Raunheimur og líkanaheimur](figs/Likanaheimur-raunheimur.jpg "Mynd: Raunheimur og líkanaheimur - 
+þýðing höfundar úr [Borshchev, 2013](#refs)")

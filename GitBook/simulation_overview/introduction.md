@@ -7,8 +7,8 @@ description: >-
 
 Heimurinn er flókið fyrirbæri og það er verk okkar að bæta hann. Þessar umbætur krefjast fyrst að við skiljum vandamálið og síðan að við getum prófað lausnir á því. Mjög oft er erfitt að gera tilraunir með raunveruleg kerfi til þess að finna góða lausn, að byggja, eyðileggja og breyta er hreinlega of dýrt, hættulegt eða jafnvel ómögulegt. Í þessum tilfellum getum við byggt líkan af raunheimi til að leysa vandamálið í líkanaheimi fyrst. Til að komast úr raunheimi og inn í líkanaheim þurfum við einföldunarstig (e. abstraction), þar sem einungis þau atriði sem teljast mikilvæg til að leysa vandamálið eru meðtekin og önnur atriði skilin eftir. Líkan af raunheimum er því alltaf einfaldara en upphaflega kerfið.
 
-![Raunheimur og líkanaheimur](figs/Likanaheimur-raunheimur.jpg)
-*Mynd: Raunheimur og líkanaheimur - þýðing höfundar úr Borshchev, 2013.*
+![Raunheimur og líkanaheimur](figs/Likanaheimur-raunheimur.jpg "Mynd: Raunheimur og líkanaheimur -
+þýðing höfundar úr Borshchev, 2013.")
 
 Þessi einfalda mynd leggur upp í fimm grundvallarspurningar: 
 1. Hvernig lýsum við vandamálinu sem er til staðar í raunheimum?
@@ -21,8 +21,8 @@ Heimurinn er flókið fyrirbæri og það er verk okkar að bæta hann. Þessar 
 
 Líkanagerð (e. modelling) fjallar um að finna leiðir til að leysa vandamál í gegnum áhættulausan heim þar sem okkur leyfist að gera mistök, hætta við, fara aftur á bak í tíma og byrja upp á nýtt. Líkön eru ekki öll eins; það eru raunveruleg líkön, stærðfræðileg líkön sem aftur bjóða upp á bæði nákvæmar lausnir sem og hermun.
 
-![Tilraunir á kerfi](figs/study_system.eps)
-*Mynd: Tilraunir á kerfi: kerfið sjálft vs. líkan - þýðing höfundar úr Law, 2007.*
+![Tilraunir á kerfi](figs/study_system.png "Mynd: Tilraunir á kerfi: kerfið sjálft vs. líkan - 
+þýðing höfundar úr Law, 2007.")
 
 # Uppbygging kvers
 

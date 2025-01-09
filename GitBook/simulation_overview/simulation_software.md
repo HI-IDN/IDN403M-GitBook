@@ -21,8 +21,8 @@ Hugbúnaður til að framkvæma hermun er mismunandi, allt frá sérgerðum herm
 
 Meira um hvernig hermunarverkfæri leysa verkefni má sjá í heimildum [Schriber & Brunner, 2001](#refs).
 
-![Hermihugbúnaður](figs/flokkun_hub.eps)
-*Mynd: Hermihugbúnaður - þýðing höfundar úr Schriber & Brunner, 2001*
+![Hermihugbúnaður](figs/flokkun_hub.png "Mynd: Hermihugbúnaður - þýðing höfundar úr Schriber & 
+Brunner, 2001")
 
 ## Tegundir hermihugbúnaðar
 
