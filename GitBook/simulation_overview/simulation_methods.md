@@ -11,8 +11,7 @@ Nútíma hermunarlíkön notast við þrjár aðferðir:
 - **Eindalíkön** (e. agent-based modelling)
 - **Kvik kerfislíkön** (e. system dynamics simulation)
 
-![3 líkanaaðferðir](figs/3_leidir_hermunar-abstractions.jpg "Mynd: 3 líkanaaðferðir - þýðing 
-höfundar úr [Borshchev, 2013](#refs)")
+![Þrjár líkanaaðferðir - þýðing höfundar úr [Borshchev, 2013](#refs)](figs/3_leidir_hermunar-abstractions.jpg)
 
 ## Stakræn atburðahermun (e. Discrete-event simulation)
 Stakræn atburðahermun (SAL) byggir á orsakasamhengi sem lýsir kerfi sem röð atburða. Í þessum aðferðum:
@@ -39,8 +38,7 @@ Kvik kerfislíkön (KKL) byggja á kerfishugsun (e. system thinking):
 
 KKL eru oft notuð til að greina stefnumótun, með áherslu á hvernig orsakasamhengi hefur áhrif á kerfi í heild.
 
-![Val á líkanaaðferð](figs/3_leidir_hermunar.png "Mynd: Val á líkanaaðferð - þýðing höfundar úr 
-[Borshchev, 2013](#refs)")
+![Val á líkanaaðferð - þýðing höfundar úr [Borshchev, 2013](#refs)](figs/3_leidir_hermunar.png)
 
 ## Notkunarsvið og val á aðferð
 Val á aðferð ræðst af:
