@@ -3,6 +3,9 @@ description: >-
   Inngangur að hermun og hvernig líkön eru notuð til að skilja og bæta flókin kerfi.
 ---
 
+> Lesið kafla 1.1-1.4 í [Law, 2015](#heimildir) fyrir frekari upplýsingar um hermun og 
+> hvernig hún er notuð til að skilja og bæta flókin kerfi.
+
 # Heimsmynd hermunar
 
 Heimurinn er flókið fyrirbæri og það er verk okkar að bæta hann. Þessar umbætur krefjast fyrst að
@@ -40,7 +43,7 @@ heim þar sem okkur leyfist að gera mistök, hætta við, fara aftur á bak í 
 Líkön eru ekki öll eins; það eru raunveruleg líkön, stærðfræðileg líkön sem aftur bjóða upp á bæði
 nákvæmar lausnir sem og hermun.
 
-![Tilraunir á kerfi: kerfið sjálft vs. líkan - þýðing höfundar úr [Law, 2007](#heimildir)](figs/study_system.png)
+![Tilraunir á kerfi: kerfið sjálft vs. líkan - þýðing höfundar úr [Law, 2015](#heimildir)](figs/study_system.png)
 
 # Uppbygging kvers
 
@@ -64,7 +67,7 @@ Til að hermun sem lausnaraðferð sé skiljanleg þarf að byrja á að útský
 
 - **Borshchev, A.** (2013). *The Big Book of Simulation Modeling: Multimethod Modeling with Anylogic
   6*. AnyLogic North America. ISBN: 978-0989573177.
-- **Law, A. M.** (2007). *Simulation Modeling and Analysis* (4th ed.). McGraw-Hill.
+- **Law, A. M.** (2015). *Simulation Modeling and Analysis* (5th ed.). McGraw-Hill.
 - **Mitroff, I. I., Betz, F., Pondy, L. R., & Sagasti, F.** (1974). *On managing science in the
   systems age: two schemas for the study of science as a whole systems phenomenon*.                
   Interfaces, 4 (3), 46–58. ISSN: 00922102.

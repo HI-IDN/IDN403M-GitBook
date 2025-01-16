@@ -17,22 +17,21 @@ reyna á mismunandi hæfni, allt frá greiningarhæfni til innsæis.
 
 ![Kerfissýn á lausnir með líkönum - þýðing höfundar úr [Mitroff, 1974](#heimildir)](figs/Mitroff.jpg)
 
-
 ## Hermun og hugbúnaðarverkfræði
 
-Hermun fylgir sömu grunngildum og
-hugbúnaðarverkfræði. [V-líkanið](https://en.wikipedia.org/wiki/V-model) í hugbúnaðarverkfræði lýsir
-vel aðferðafræðinni í líkanagerð. Mikilvægt er að hafa í huga:
+Hermun fylgir sömu grunngildum og hugbúnaðarverkfræði.
+[V-líkanið](https://en.wikipedia.org/wiki/V-model) í hugbúnaðarverkfræði lýsir vel aðferðafræðinni í
+líkanagerð. Mikilvægt er að hafa í huga:
 
-- **Sannprófun** *(e. verification)*: Ber saman hvort líkan uppfylli skilgreindar kröfur.
-- **Staðfesting** *(e. validation)*: Skoðar hvort líkan lýsi raunheimum á ásættanlegan hátt.
+- **Sannprófun** (e. verification): Ber saman hvort líkan uppfylli skilgreindar kröfur.
+- **Staðfesting** (e. validation): Skoðar hvort líkan lýsi raunheimum á ásættanlegan hátt.
 
 ## Kostir og gallar hermunar
 
 **Kostir:**
 
 - Getur greint kerfi þar sem nákvæmar lausnir eru ekki mögulegar.
-- Auðvelt að þróa og skala með modular uppbyggingu.
+- Auðvelt að þróa og skala með *modular* uppbyggingu.
 - Leyfir stýrðar tilraunir og samanburð lausna.
 
 **Gallar:**
