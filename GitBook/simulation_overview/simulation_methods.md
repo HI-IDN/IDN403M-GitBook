@@ -7,19 +7,19 @@ description: >-
 
 Nútíma hermunarlíkön byggja á þremur megin aðferðum:
 
-- **Stakræn atburðahermun** (discrete-event simulation): Aðferð sem lýsir ferlum í kerfi þar sem
+- **Stakræn atburðahermun** (e. discrete-event simulation): Aðferð sem lýsir ferlum í kerfi þar sem
   atburðir eiga sér stað á tilteknum tímapunktum.
-- **Eindalíkön** (agent-based modelling): Aðferð sem beinir sjónum að hegðun einstaklinga í kerfi og
-  samskiptum þeirra.
-- **Kvik kerfislíkön** (system dynamics simulation): Aðferð sem fjallar um flæði og uppsöfnun innan
-  kerfa með áherslu á kerfishugsun og orsakasamhengi.
+- **Eindalíkön** (e. agent-based modelling): Aðferð sem beinir sjónum að hegðun einstaklinga í 
+  kerfi og samskiptum þeirra.
+- **Kvik kerfislíkön** (e. system dynamics simulation): Aðferð sem fjallar um flæði og uppsöfnun 
+  innan kerfa með áherslu á kerfishugsun og orsakasamhengi.
 
 Hver aðferð er hugsuð sem rammi til að kortleggja flókin kerfi í líkanaheimi. Aðferðirnar henta
 mismunandi stigum óhlutbundleika (abstraction levels).
 
 - **Kvik kerfislíkön** henta oft vel þegar unnið er með háu óhlutbundleikastigi, t.d. við
   stefnumótun
-  (strategic modelling).
+  (e. strategic modelling).
 - **Stakræn atburðahermun** styður bæði meðal og lágt óhlutbundleikastig.
 - **Eindalíkön** sveigjast á milli, allt frá mjög nákvæmum smáatriðum upp í líkön sem fást við
   stórar einingar, eins og fyrirtæki eða ríkisstjórnir.
@@ -36,8 +36,8 @@ Val á aðferð við líkanagerð fer eftir ýmsum þáttum, svo sem:
 
 1. **Markmiðum líkanagerðar** – Hvað á að ná fram með líkaninu?
 2. **Þekkingu á kerfinu** – Hve vel eru tengsl og hegðun innan kerfisins þekkt?
-3. **Viðeigandi óhlutbundleikastigi** (abstraction level) – Hve mikið af smáatriðum þarf að taka inn
-   í líkanið?
+3. **Viðeigandi óhlutbundleikastigi** (e. abstraction level) – Hve mikið af smáatriðum þarf að 
+   taka inn í líkanið?
 
 Aðferðina þarf alltaf að velja í samhengi við kerfið sem á að gera líkan af og þau markmið sem
 stefnt er að. Myndin hér að neðan sýnir hvernig mismunandi aðferðir geta nýst við gerð líkans fyrir
@@ -46,13 +46,13 @@ einfalt dæmi eins og búð.
 Það væri til dæmis hægt að:
 
 - **Nota ferlalíkan**, þar sem viðskiptavinir og starfsmenn eru auðlindir sem flæða í gegnum kerfið.
-- **Nota eindalíkan**, þar sem viðskiptavinir eru skilgreindir sem eindir (agents) sem verða
+- **Nota eindalíkan**, þar sem viðskiptavinir eru skilgreindir sem eindir (e. agents) sem verða
   fyrir áhrifum frá auglýsingum, samskiptum og hegðun starfsmanna.
 - **Nota kvikt kerfislíkan**, þar sem endurgjafarskipulag er skoðað, t.d. hvernig sölur tengjast
   auglýsingum, þjónustugæðum, verði og viðskiptatryggð.
 
 Ef kerfið er flókið og krefst mismunandi nálgana getur verið árangursríkt að nota margtækni líkan
-(multi-method model), sem sameinar styrkleika allra aðferða, [Borshchev, 2013](#heimildir).
+(e. multi-method model), sem sameinar styrkleika allra aðferða, [Borshchev, 2013](#heimildir).
 
 ![Val á líkanaaðferð - þýðing höfundar úr [Borshchev, 2013](#heimildir)](figs/3_leidir_hermunar.png)
 
