@@ -11,8 +11,8 @@ tilraunir með raunveruleg kerfi til þess að finna góða lausn, að byggja, e
 hreinlega of dýrt, hættulegt eða jafnvel ómögulegt. Í þessum tilfellum getum við byggt líkan af
 raunheimi til að leysa vandamálið í líkanaheimi fyrst. Til að komast úr raunheimi og inn í
 líkanaheim þurfum við einföldunarstig (e. abstraction), þar sem einungis þau atriði sem teljast
-mikilvæg til að leysa vandamálið eru meðtekin og önnur atriði skilin eftir. Líkan af raunheimum er
-því alltaf einfaldara en upphaflega kerfið.
+mikilvæg til að leysa vandamálið eru tekin til greina og önnur atriði skilin eftir. Líkan af 
+raunheimum er því alltaf einfaldara en upphaflega kerfið.
 
 ![Raunheimur og líkanaheimur - þýðing höfundar úr [Borshchev, 2013](#heimildir)](figs/Likanaheimur-raunheimur.jpg)
 
@@ -30,7 +30,7 @@ mikilvæg til að leysa vandamálið eru meðtekin og önnur atriði skilin efti
 > gera ekki breytingar beint í raunheimi án prófana, eins og bannmerkið á myndinni sýnir.
 
 Það er markmið þessa kvers að kynna aðalatriði í hermun með því að fara í gegnum fyrstu fjóra
-punktana. Síðast punkturinn verður að bíða betri tíma. Fasar líkanagerðar sem fást við að ná
+punktana. Síðasti punkturinn verður að bíða betri tíma. Fasar líkanagerðar sem fást við að ná
 raunheimi inn í líkanaheim (spurningar 1 til 3), val á stigi (e. abstraction level) og að velja
 hermunaraðferð eru allar óformlegri en ferlið við að nota líkön til að leysa vandamál. Í raun eru
 þeir fasar meira list en vísindi.
