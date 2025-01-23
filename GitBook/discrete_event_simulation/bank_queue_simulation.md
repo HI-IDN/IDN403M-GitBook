@@ -28,14 +28,14 @@ Við herma um `n` viðskiptavini og byrjum með „tómt-og-í-bið“ stöðu �
 
 ### Meðalbiðtími í röð
 
-Til að meta meðalbiðtíma þarf að safna biðtíma fyrir hvern viðskiptavin, skilgreindur sem `Di`.
+Til að meta meðalbiðtíma þarf að safna biðtíma fyrir hvern viðskiptavin, skilgreindur sem $D_i$.
 Meðaltalið er reiknað sem:
 
 $$d(n) = \frac{D_1 + D_2 + \dots + D_n}{n}$$
 
 ### Meðalfjöldi í röð
 
-Fjöldi í röð yfir tíma `Q(t)` er teiknaður á móti tíma. Heildarsvæðið undir ferlinum deilt með
+Fjöldi í röð yfir tíma $Q(t)$ er teiknaður á móti tíma. Heildarsvæðið undir ferlinum deilt með
 heildartíma gefur meðalfjölda í röð:
 
 $$\text{Meðalfjöldi í röð} = \frac{\int Q(t) dt}{\text{Heildartími}}$$
@@ -50,14 +50,14 @@ $$\text{Nýtni} = \frac{\text{Virkniþáttur}}{\text{Heildartími}}$$
 
 ## Framsetning á kerfinu
 
-### Fyrsta viðmiðunarmæling: Biðröð $Q(t)$
+### Fyrsta viðmiðunarmæling: Biðröð `Q(t)`
 
 ![Biðröð $Q(t)$ sýnir komur og brottfarir](figs/Synidaemi_MM1_-_Q(t).png)
 
 Biðröð $Q(t)$ teiknar allar komur og brottfarir viðskiptavina þar til 5 viðskiptavinir hafa
 yfirgefið kerfið.
 
-### Önnur viðmiðunarmæling: Þjónn $B(t)$
+### Önnur viðmiðunarmæling: Þjónn `B(t)`
 
 ![Þjónn $B(t)$: Virkni þjónustufulltrúa](figs/Synidaemi_MM1_-_B(t).png)
 
@@ -68,7 +68,7 @@ yfirgefið kerfið.
 
 ### Samspil $B(t)$ og $Q(t)$
 
-![Samspil á milli biðraðar $Q(t)$ og þjóns $B(t)$](figs/Synidaemi_MM1_-_Q(t)+B(t).png)
+![Samspil á milli biðraðar `Q(t)` og þjóns `B(t)`](figs/Synidaemi_MM1_-_Q(t)+B(t).png)
 
 Samspil $B(t)$ og $Q(t)$ gefur heildarfjölda í kerfinu á hverjum tíma.
 
