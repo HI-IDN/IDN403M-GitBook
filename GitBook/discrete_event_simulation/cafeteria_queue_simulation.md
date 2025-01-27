@@ -159,4 +159,4 @@ Hermunin keyrir þar til hámarkstími (`max_time`) hefur verið náð.
     - Safna meðaltölum og staðalfrávikum yfir keyrslur.
 6. Skila niðurstöðum með samantekt yfir fjölda viðskiptavina og nýtingu kerfisins.
 
-> Beinagrind að kóða í Python má finna [hér][code/simulation_process.py]
+> Beinagrind að kóða í Python má finna [hér](code/simulation_process.py).
