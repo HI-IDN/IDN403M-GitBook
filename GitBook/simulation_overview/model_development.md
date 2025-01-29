@@ -15,7 +15,7 @@ Ferlið við líkanagerð tekur mið af fjórum mismunandi heimum:
 Tengingar á milli þessara heima fela í sér hugtakamótun, líkanagerð og líkanalausn. Aðferðirnar
 reyna á mismunandi hæfni, allt frá greiningarhæfni til innsæis.
 
-![Kerfissýn á lausnir með líkönum - þýðing höfundar úr [Mitroff, 1974](#heimildir)](figs/Mitroff.jpg)
+![Kerfissýn á lausnir með líkönum - þýðing höfundar úr [Mitroff, 1974](#heimildir)](figs/Mitroff.jpg){#mitroff-kerfissýn}
 
 ## Hermun og hugbúnaðarverkfræði
 
