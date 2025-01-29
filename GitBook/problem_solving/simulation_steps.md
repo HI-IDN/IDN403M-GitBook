@@ -1,8 +1,7 @@
 ---
-
 description: >-
-Ferli við að leysa vandamál með hermun, þar sem farið er yfir skref frá hugtakalíkani til niðurstöðu með skýrum og skipulögðum hætti.
------------------------------------------------------------------------------------------------------
+  Ferli við að leysa vandamál með hermun, þar sem farið er yfir skref frá hugtakalíkani til niðurstöðu með skýrum og skipulögðum hætti.
+---
 
 # Skref stakrænnar atburðahermunar
 

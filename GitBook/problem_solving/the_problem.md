@@ -14,6 +14,7 @@ Tilraunir hafa alltaf verið mikilvægar í lausn vandamála. Í raunheimi má l
 eftirfarandi skýringarmynd:
 
 ![Lausn vandamála með tilraun, þýðing höfundar úr Wainer, 2009](figs/Lausn_vandamala-tilraun_1.jpg)
+
 ---
 
 ## Takmarkanir á tilraunum í raunheimi
