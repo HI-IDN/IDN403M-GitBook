@@ -3,7 +3,7 @@ description: >-
   Ferli við að þróa líkön, allt frá hugmynd til vísindalegrar lausnar.
 ---
 
-# Gerð líkana
+# Gerð líkana {#mitroff-kerfissýn}
 
 Ferlið við líkanagerð tekur mið af fjórum mismunandi heimum:
 
@@ -15,7 +15,7 @@ Ferlið við líkanagerð tekur mið af fjórum mismunandi heimum:
 Tengingar á milli þessara heima fela í sér hugtakamótun, líkanagerð og líkanalausn. Aðferðirnar
 reyna á mismunandi hæfni, allt frá greiningarhæfni til innsæis.
 
-![Kerfissýn á lausnir með líkönum - þýðing höfundar úr [Mitroff, 1974](#heimildir)](figs/Mitroff.jpg){#mitroff-kerfissýn}
+![Kerfissýn á lausnir með líkönum - þýðing höfundar úr [Mitroff, 1974](#heimildir)](figs/Mitroff.jpg)
 
 ## Hermun og hugbúnaðarverkfræði
 
