@@ -15,9 +15,7 @@
 * [Sýnidæmi: Hermun á háskólamötuneyti](discrete_event_simulation/cafeteria_queue_simulation.md)
 
 ## Lausn vandamála með hermilíkani
-* [Vandamálið](problem_solving/the_problem.md)
-* [Atburðarit](problem_solving/process_diagrams.md)
-* [Ferlalýsingar](problem_solving/process_descriptions.md)
+* [Lausnaraðferðir hermunar](problem_solving/the_problem.md)
 * [Skref stakrænnar atburðahermunar](problem_solving/simulation_steps.md)
 
 ## Úr raunheimi í líkanaheim
