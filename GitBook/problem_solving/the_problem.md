@@ -76,7 +76,7 @@ annað í stakrænni atburðahermun. Þau eru notuð til að skilja tímaröð o
 geta hjálpað við að greina flöskuhálsa eða ósamræmi í kerfishönnun.
 
 [Law (2007)](#heimildir) fjallar um þessa aðferð í kafla 1.4.7, og ítarefni má finna hjá [Buss
-(2001)](#heimildir) og [Schruben (1983)](heimildir.md#schruben1983).
+(2001)](#heimildir) og [Schruben (1983)](#heimildir).
 
 ## Ferlalýsingar
 
