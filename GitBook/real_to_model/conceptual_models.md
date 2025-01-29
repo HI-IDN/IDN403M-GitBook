@@ -8,7 +8,7 @@ description: >-
 Hermun er tól til að aðstoða við ákvörðunartöku á ákveðnu vandamáli í ákveðnu samhengi. Til þess
 þurfum við að komast úr vandamálinu í raunheimi yfir í líkan sem við getum keyrt í tölvu. Eins og
 áður hefur komið fram (sjá mynd
-[Kerfissýn á lausnir með líkönum](../simulation_overview/model_development.md#mitroff-kerfissýn))
+[Kerfissýn á lausnir með líkönum](../simulation_overview/model_development.md#gerd-likana))
 þá þurfum við fyrst að lýsa hvað á að gera og svo getum við forritað vísindalíkan. Þetta millistig
 er hugtakalíkan, sem getur verið á mismunandi stigum, frá mjög einföldu upp í viðamikil. Þessi kafli
 fjallar um inntak hugtakalíkana og hvað þarf að hafa í huga við gerð þeirra.

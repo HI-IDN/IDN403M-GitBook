@@ -3,7 +3,7 @@ description: >-
   Ferli við að þróa líkön, allt frá hugmynd til vísindalegrar lausnar.
 ---
 
-# Gerð líkana {#mitroff-kerfissýn}
+# Gerð líkana
 
 Ferlið við líkanagerð tekur mið af fjórum mismunandi heimum:
 
