@@ -8,12 +8,33 @@ description: >-
 Stundum höfum við áhuga á að láta gögnin sjálf skilgreina dreifinguna og ekki nota fræðilegt
 dreififall. Þetta getur verið mikilvægt þegar engin fræðileg líkön passa vel við gögnin.
 
-## Strjált raundreifing
+## Strjál raundreifing
 
-Strjált raundreifing er auðvelt að skilgreina:
+Strjál raundreifing á sér stað þegar slembibreyta getur aðeins tekið ákveðin stök gildi.
+Hægt er að reikna líkindi hvers gildis með:
 
 - Líkindi $$p(x)$$ eru einfaldlega hlutfall gildanna $$X_i$$ sem eru jafnt og $$x$$.
-- Í R má reikna þetta með:
+- Í R má reikna þetta með því að telja tíðni hvers gildis í gagnasafninu og deila með heildarfjölda
+  mælinga.
+
+Eftirfarandi R-kóði sýnir hvernig hægt er að reikna og teikna strjála raundreifingu:
+
+```r
+library(tidyverse)
+# Strjál raundreifing
+X <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
+df_strjal <- as_tibble(table(X)) %>%
+  rename(x = X, freq = n) %>%
+  mutate(prob = freq / sum(freq))
+ggplot(df_strjal, aes(x = as.factor(x), y = prob)) +
+  geom_col(fill = "lightblue") +
+  labs(title = "Strjál raundreifing", x = "Gildi", y = "Líkindi") +
+  theme_minimal()
+```
+
+![Dæmi um strjála raundreifingu](figs/empirical_discrete.jpg)
+Myndin sýnir tíðnidreifingu fyrir strjálar slembibreytingar. Hver súla táknar líkindi þess að
+ákveðið gildi komi fyrir í gögnunum.
 
 ## Samfelld raundreifing
 
@@ -27,40 +48,47 @@ F(x) = \begin{cases}
 \end{cases}
 $$
 
-## Samanburður á raundreifingum
-
-Til að bera saman dreifingar notum við bæði tölfræðileg og myndræn verkfæri. Til dæmis má er hægt að
-reikna raunverulegt dreififall og bera saman við fræðileg líkön í R.
-
-Eftirfarandi kóði inniheldur aðferðir til að vinna með strjálar og samfelldar raundreifingar, teikna
-tíðnidreifingu og bera saman dreifingar:
+Eftirfarandi R-kóði sýnir hvernig hægt er að reikna og teikna samfellda raundreifingu:
 
 ```r
-# Búa til strjált raundreififall
-X <- c(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
-p_x <- table(X) / length(X)
-print(p_x)
-
-# Búa til samfellda raundreifingu
 set.seed(42)
-X <- sort(runif(10, min = 0, max = 10)) # Tilviljanakennd gögn
-x_vals <- seq(min(X), max(X), length.out = 100)
-F_x <- ecdf(X)
-
-# Teikna dreififallið
-plot(F_x, main = "Raundreifing", xlab = "x", ylab = "F(x)")
-
-# Búa til gögn fyrir samanburð
-set.seed(42)
-n <- 100
-X <- rnorm(n, mean = 5, sd = 2)
-
-# Reikna dreififall og tíðnidreifingu
-hist(X, probability = TRUE, col = "lightblue", main = "Samanburður á dreifingum")
-lines(density(X), col = "red", lwd = 2) # Þéttleikafall
-curve(dnorm(x, mean = mean(X), sd = sd(X)), col = "blue", lwd = 2, add = TRUE) # Normleg dreifing
-legend("topright", legend = c("Raungögn", "Þéttleikafall", "Normleg dreifing"), col = c("lightblue", "red", "blue"), lwd = 2)
+X_samfelld <- runif(100, min = 0, max = 10)
+ggplot(data.frame(X_samfelld), aes(x = X_samfelld)) +
+  stat_ecdf(geom = "step", color = "blue") +
+  labs(title = "Samfelld raundreifing", x = "x", y = "F(x)") +
+  theme_minimal()
 ```
+
+![Dæmi um samfellda raundreifingu](figs/empirical_continuous.jpg)
+Bláa línan sýnir uppsafnað dreififall, $$F(x)$$ þar sem gildi safnast upp með hækkandi $$x$$.
+
+## Samanburður á raundreifingum
+
+Til að bera saman dreifingar notum við bæði myndrænar og tölfræðilegar aðferðir. Eitt dæmi er að
+bera saman raunverulegt þéttleikafall og fræðilega dreifingu.
+
+Eftirfarandi R-kóði sýnir hvernig við getum borið saman tíðnidreifingu við normal dreifingu:
+
+```r
+## Samanburður á raundreifingum og líkindum
+n <- 1000
+X_norm <- rnorm(n, mean = 5, sd = 2)
+
+k <- round(1 + log2(n)) # Regla Sturges fyrir fjölda stöpla
+ggplot(data.frame(X_norm), aes(x = X_norm)) +
+  geom_histogram(aes(y = ..density..), fill = "lightgrey", bins = k, alpha = 0.6) +
+  geom_density(aes(color = "Raunveruleg"), size = 1, linetype = "dashed") +
+  stat_function(fun = dnorm, args = list(mean = mean(X_norm), sd = sd(X_norm)),
+                aes(color = "Fræðileg"), size = 1) +
+  labs(title = "Samanburður á fræðilegri og raundreifingu", x = "x", y = "Þéttleiki", color="Dreifing") +
+  theme_minimal()
+```
+![Samanburður á raundreifingu og fræðilegri dreifingu](figs/empirical_comparison.jpg)
+
+Á myndinni sést samanburður á raunverulegum gögnum og fræðilegri dreifingu. Rauða línan sýnir 
+fræðilega normaldreifið fall með meðaltali 5 og staðalfráviki 2. Bláa línan sýnir þéttleikafall
+raunverulegra mælinga. Ljósa súlurnar sýna stöplarit af mælingunum. Fjöldi stöpla er reiknað út 
+frá *reglu Sturges*.
 
 > **Athugasemd:** Ef fræðileg dreifing passar illa við gögnin getur verið betra að nota raunmælingar
 > til að móta líkindalíkan.
