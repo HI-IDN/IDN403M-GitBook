@@ -32,7 +32,7 @@ $$
 ## Fervik (e. variance)
 
 Fervik (e. variance) mælir dreifingu slembibreytu um meðalgildið hennar $$\mu$$. Það er táknað
-með $$\sigma_i^2$ eða $$\text{Var}(X_i)$$ og skilgreint sem:
+með $$\sigma_i^2$$ eða $$\text{Var}(X_i)$$ og skilgreint sem:
 
 $$
 \sigma_i^2 = E\big[(X_i - \mu_i)^2\big] = E[X_i^2] - \mu_i^2
@@ -114,7 +114,7 @@ $$
 \mu_i = \mu, \quad \sigma_i^2 = \sigma^2, \quad C_{i,i+j} = \text{Cov}(X_i, X_{i+j}),
 $$
 
-þar sem $$C_{i,i+j}$$ er óháð $i$ fyrir öll $$j$$.
+þar sem $$C_{i,i+j}$$ er óháð $$i$$ fyrir öll $$j$$.
 
 > **Dæmi:**  
 > Fyrir M/M/1 biðraðakerfi, ef fyrstu athuganir $$D_1, D_2, \ldots, D_k$$ eru fjarlægðar, þá getur
