@@ -29,14 +29,14 @@ $$S = \big\{ (1,1), (1,2), \ldots, (i,j), \ldots, (6,6)\big\}$$
 
 ## Dreififall (e. cumulative distribution function, CDF)
 
-Dreififall $$F(x)$$ lýsir líkum þess að slembibreyta $$X$$ taki gildi sem er minna en eða jafnt $$
-x$:
+Dreififall $$F(x)$$ lýsir líkum þess að slembibreyta $$X$$ taki gildi sem er minna en eða jafnt 
+$$x$$:
 
 $$F(x) = P(X \le x)~~~\text{fyrir}~~~-\infty < x < \infty$$
 
 ### Eiginleikar dreififalls:
 
-1. $$0\leq F(x) \leq 1$$ fyrir öll $$x$.
+1. $$0\leq F(x) \leq 1$$ fyrir öll $$x$$.
 2. $$F(x)$$ er vaxandi, þ.e. $$x_1 < x_2 \Rightarrow F(x_1) \leq F(x_2)$$.
 3. $$\lim_{x\rightarrow \infty} F(x) = 1$$ og $$\lim_{x\rightarrow -\infty} F(x) = 0$$
 
@@ -79,7 +79,7 @@ $$P(x\in I) = \int_a^b f(x) dx$$
 $$\int_{-\infty}^\infty f(x) dx = 1$$
 
 > **Mikilvægt:**  
-> $$f(x)$$ gefur ekki líkur á tilteknu gildi $$X=x$, heldur líkurnar á því að
+> $$f(x)$$ gefur ekki líkur á tilteknu gildi $$X=x$$, heldur líkurnar á því að
 > $$X$$ liggi innan ákveðins bils.  
 > Í raun er $$P(X=x)=0$$ fyrir samfelldar slembibreytur.
 
@@ -130,4 +130,5 @@ $$f(x,y) = f_X(x)f_Y(y)$$
 Þar sem jaðardreifingar eru gefnar með:
 
 $$f_X(x) = \int_{-\infty}^\infty f(x,y) dy$$
+
 $$f_Y(y) = \int_{-\infty}^\infty f(x,y) dx$$
