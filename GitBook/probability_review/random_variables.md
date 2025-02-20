@@ -72,7 +72,7 @@ $$P(x\in I) = \int_a^b f(x) dx$$
 
 þar sem:
 
-- $$I$$ eru allar rauntölur milli $$a$$ og $$b$
+- $$I$$ eru allar rauntölur milli $$a$$ og $$b$$
 - $$f(x)$$ er **líkindaþéttleikafall (e. probability density function, PDF)**
 - Fallið $$f(x)$$ uppfyllir skilyrðið:
 
