@@ -6,9 +6,9 @@ description: >-
 
 # Mat á breytileika fyrir hermilíkön
 
-> Í hermun er mikilvægt að skilja hvaða breytur eru slembnar og hvernig þær dreifast.
-> Þessi kafli fjallar um val á inntaksdreifingum, aðferðir til að meta þær og samanburð milli
-> fræðilegra og raunmældra dreifinga.
+Í hermun er mikilvægt að skilja hvaða breytur eru slembnar og hvernig þær dreifast.
+Kafli 6. í Law (2007) fjallar um val á inntaksdreifingum, aðferðir til að meta þær og 
+samanburð milli fræðilegra og raunmældra dreifinga.
 
 ## Inntak, virkni og frálag í hermun
 
