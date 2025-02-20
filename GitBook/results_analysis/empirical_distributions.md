@@ -60,6 +60,7 @@ ggplot(data.frame(X_samfelld), aes(x = X_samfelld)) +
 ```
 
 ![Dæmi um samfellda raundreifingu](figs/empirical_continuous.jpg)
+
 Bláa línan sýnir uppsafnað dreififall, $$F(x)$$ þar sem gildi safnast upp með hækkandi $$x$$.
 
 ## Samanburður á raundreifingum
@@ -86,7 +87,7 @@ ggplot(data.frame(X_norm), aes(x = X_norm)) +
 ![Samanburður á raundreifingu og fræðilegri dreifingu](figs/empirical_comparison.jpg)
 
 Á myndinni sést samanburður á raunverulegum gögnum og fræðilegri dreifingu. Rauða línan sýnir 
-fræðilega normaldreifið fall með meðaltali 5 og staðalfráviki 2. Bláa línan sýnir þéttleikafall
+fræðilega normal dreift fall með meðaltali 5 og staðalfráviki 2. Bláa línan sýnir þéttleikafall
 raunverulegra mælinga. Ljósa súlurnar sýna stöplarit af mælingunum. Fjöldi stöpla er reiknað út 
 frá *reglu Sturges*.
 
@@ -97,7 +98,6 @@ frá *reglu Sturges*.
 
 ## Mikilvægi raundreifinga
 
-- **Henta vel þegar engin fræðileg líkön passa við gögnin.**
-- **Gefa betri mynd af raunverulegum dreifingum í gögnum.**
-- **Hægt að nota til að sannreyna hvort fræðileg dreifing sé viðeigandi.**
-
+- Henta vel þegar engin fræðileg líkön passa við gögnin.
+- Gefa betri mynd af raunverulegum dreifingum í gögnum.
+- Hægt að nota til að sannreyna hvort fræðileg dreifing sé viðeigandi.
