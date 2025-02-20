@@ -110,10 +110,9 @@ $$p(x,y) = p_X(x)p_Y(y)$$
 
 Sundurliðun yfir allar mögulegar útkomur gefur:
 
-$$\begin{aligned}
-p_X(x) = \sum_{\text{öll}~ y} p(x,y)\\
-p_Y(y) = \sum_{\text{öll}~ x} p(x,y)
-\end{aligned}$$
+$$p_X(x) = \sum_{\text{öll}~ y} p(x,y)$$
+
+$$p_Y(y) = \sum_{\text{öll}~ x} p(x,y)$$
 
 ---
 
