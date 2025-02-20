@@ -44,7 +44,7 @@ $$F(x) = P(X \le x)~~~\text{fyrir}~~~-\infty < x < \infty$$
 ## Strjál dreifing (e. discrete distribution)
 
 Slembibreyta $$X$$ er sögð vera **strjál (e. discrete)** ef hún getur tekið teljanlegan fjölda gilda,
-t.d. $$x_1, x_2, \ldots, x_n$. Líkur þess að $$X$$ taki gildi $$x_i$$ eru:
+t.d. $$x_1, x_2, \ldots, x_n$$. Líkur þess að $$X$$ taki gildi $$x_i$$ eru:
 
 $$p(x_i) = P(X=x_i) ~~~ \text{fyrir} ~~~i=1,2,\ldots$$
 
@@ -92,7 +92,7 @@ $$P(x\in I) = F(b)-F(a)$$
 
 ## Samlíkindafall (e. joint probability function)
 
-Ef við höfum tvær slembibreytur, $$X$$ og $$Y$, sem eru annaðhvort **strjálar** eða **samfelldar**,
+Ef við höfum tvær slembibreytur, $$X$$ og $$Y$$, sem eru annaðhvort **strjálar** eða **samfelldar**,
 getum við lýst sameiginlegum líkindum þeirra með **samlíkindafalli (e. joint probability function)
 **.
 
@@ -127,8 +127,6 @@ $$f(x,y) = f_X(x)f_Y(y)$$
 
 Þar sem jaðardreifingar eru gefnar með:
 
-$$\begin{aligned}
-f_X(x) &= \int_{-\infty}^\infty f(x,y) dy\\
-f_Y(y) &= \int_{-\infty}^\infty f(x,y) dx
-\end{aligned}$$  
+$$f_X(x) = \int_{-\infty}^\infty f(x,y) dy$$
+$$f_Y(y) = \int_{-\infty}^\infty f(x,y) dx$$
 
