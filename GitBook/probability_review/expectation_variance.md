@@ -27,6 +27,8 @@ $$
 > - **Miðgildi (e. median)**: Gildi $$x_{0.5}$$ þar sem $$F_{X_i}(x_{0.5}) = 0.5$$.
 > - **Algengasta gildi (e. mode)**: $$x$$ sem hámarkar $$f_{X_i}(x)$$ eða $$p_{X_i}(x)$$.
 
+![Væntigildi, miðgildi og algengasta gildi](figs/mean_median_mode.png)
+
 ---
 
 ## Fervik (e. variance)
