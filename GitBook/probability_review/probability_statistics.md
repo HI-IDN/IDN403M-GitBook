@@ -15,7 +15,7 @@ verkfæraþættir í hermun** til að tryggja að líkön séu rétt skilgreind 
 > Tölfræði er notuð til að skilja hegðun líkana, sannreyna líkön og greina úttaksgögn. Hún tryggir
 > að hermun veiti raunhæfar niðurstöður sem hægt er að nota til ákvarðanatöku.
 
-# Notkun líkindafræði og tölfræði í hermun
+## Notkun líkindafræði og tölfræði í hermun
 
 Líkindi og tölfræði eru nýtt á mismunandi stigum hermunar:
 
@@ -41,7 +41,7 @@ Líkindi og tölfræði eru nýtt á mismunandi stigum hermunar:
 
 ---
 
-# Háð gögn og áskoranir í tölfræði hermunar
+## Háð gögn og áskoranir í tölfræði hermunar
 
 Í hefðbundinni tölfræði er oft gert ráð fyrir að athuganir séu óháðar (e. independent). Í hermun er
 þetta yfirleitt ekki raunin þar sem gögnin eru tímaröðuð og háð fyrri stöðum líkansins.
