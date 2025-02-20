@@ -165,5 +165,6 @@ $$
 
 > **Dæmi:**  
 > Fyrir M/M/1 biðraðakerfi, ef fyrstu athuganir $$D_1, D_2, \ldots, D_k$$ eru fjarlægðar, þá getur
-> ferlið orðið með jafnvægis-samfylgni eftir ákveðinn tíma.
+> ferlið orðið með jafnvægis-samfylgni eftir ákveðinn tíma, þetta er kallað 
+> **upphitunarferli** (e. warm-up period).
 
