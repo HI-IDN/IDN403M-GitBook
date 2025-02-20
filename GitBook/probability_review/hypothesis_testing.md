@@ -14,13 +14,15 @@ $$
 Z_n = \frac{\bar{X}(n) - \mu}{\sqrt{\sigma/n}}
 $$
 
-Þá segir *höfuðsetning tölfræðinnar* að þegar $$n \rightarrow \infty$$ stefnir dreififallið $$F_n(z)$$ á normaldreifingu:
+Þá segir *höfuðsetning tölfræðinnar* að þegar $$n \rightarrow \infty$$ stefnir
+dreififallið $$F_n(z)$$ á normaldreifingu:
 
 $$
 F_n(z) \rightarrow \frac{1}{\sqrt{2\pi}} \int_{-\infty}^z e^{-y^2/2}dy
 $$
 
-> **Túlkun:** Þessi setning segir að þegar úrtaksstærðin $$n$$ er nægilega stór, þá verður úrtaksmeðaltalið $$\bar{X}(n)$$ næstum normaldreift óháð undirliggjandi dreifingu á $$X_i$$.
+> **Túlkun:** Þessi setning segir að þegar úrtaksstærðin $$n$$ er nægilega stór, þá verður
+> úrtaksmeðaltalið $$\bar{X}(n)$$ næstum normaldreift óháð undirliggjandi dreifingu á $$X_i$$.
 
 ## Öryggisbil
 
@@ -30,7 +32,8 @@ $$
 \bar{X}(n) \pm z_{1-\alpha/2} \sqrt{\frac{S^2(n)}{n}}
 $$
 
-> **Túlkun:** Ef mörg öryggisbil eru reiknuð með óháðum athugunum, þá erum við í $$100(1-\alpha)\%$$ tilvika með sanna gildið $$\mu$$ innan þeirra bila.
+> **Túlkun:** Ef mörg öryggisbil eru reiknuð með óháðum athugunum, þá erum við í $$100(1-\alpha)\%$$
+> tilvika með sanna gildið $$\mu$$ innan þeirra bila.
 
 Ef $$X$$-in eru normaldreifðar slembibreytur, er betra að nota:
 
@@ -40,7 +43,9 @@ $$
 
 þar sem $$t_{n-1,1-\alpha/2}$$ er höfnunarmark fyrir t-dreifingu með $$n-1$$ frelsisgráðum.
 
-> **Athugasemd:** Þar sem $$t$$-dreifingin hefur þykkari hala en normaldreifingin, verður öryggisbilið stærra. Þess vegna er oft mælt með notkun $$t$$-dreifingar þegar fervikið er áætlað úr gögnum.
+> **Athugasemd:** Þar sem $$t$$-dreifingin hefur þykkari hala en normaldreifingin, verður
+> öryggisbilið stærra. Þess vegna er oft mælt með notkun $$t$$-dreifingar þegar fervikið er áætlað úr
+> gögnum.
 
 ## Tilgátupróf
 
@@ -65,8 +70,9 @@ $$
 
 ## t-dreifing
 
-Til að prófa tilgátur þar sem fervikið er ekki þekkt, notum við $$t$$-dreifingu. Þegar 
-úrtaksstærðin er lítil og fervikið er metið út frá gögnum, hefur t-dreifingin þykkari hala en normaldreifingin, sem leiðir til stærri öryggisbila.
+Til að prófa tilgátur þar sem fervikið er ekki þekkt, notum við $$t$$-dreifingu. Þegar
+úrtaksstærðin er lítil og fervikið er metið út frá gögnum, hefur t-dreifingin þykkari hala en
+normaldreifingin, sem leiðir til stærri öryggisbila.
 
 Hér að neðan er R-kóði sem hermir út $$p$$-gildi fyrir tilgátupróf með $$t$$-dreifingu:
 
@@ -94,12 +100,13 @@ Pr_t <- mean((Xbar - tgildi * sqrt(S2 / n) <= mu) & (mu <= Xbar + tgildi * sqrt(
 cat(sprintf("Hermun á P-gildi, Pr_t = %f, rétt P-gildi er 1-alpha = %f\n", Pr_t, 1 - alpha))
 ```
 
-## Þumalputtareglur
+Hér að neðan eru niðurstöður úr hermun á $$p$$-gildum við mismunandi aðstæður:
 
-- Þegar fervikið er þekkt, þá gefur normaldreifingin nákvæmar öryggismörk.
-- Þegar fervikið er metið úr úrtakinu, gefur normaldreifingin oft of þröng mörk.
-- Þegar fervikið er óþekkt, er $$t$$-dreifingin réttari vegna þess að hún tekur tillit til 
-  óvissunnar í mati á ferviki.
+| Aðferð        | Hermuð líkindi | Rétt líkindi $$(1 - \alpha)$$ | Athugasemd                                                                                                                               |
+|---------------|----------------|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Fervik þekkt  | 0.899875       | 0.900000                      | Þegar fervikið er þekkt, þá er hermuð niðurstaða mjög nálægt réttum líkindaþröskuldi.                                                    |
+| Mat á ferviki | 0.865631       | 0.900000                      | Þegar fervikið er metið úr úrtakinu, er $$p$$-gildið lægra en það ætti að vera, sem bendir til þess að öryggisbilið hafi verið vanmetið. |
+| t-dreifing    | 0.899761       | 0.900000                      | Notkun $$t$$-dreifingar leiðir til betri mats á $$p$$-gildinu þegar fervikið er óþekkt.                                                  |
 
 ---
 
