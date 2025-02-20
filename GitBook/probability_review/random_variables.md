@@ -129,13 +129,8 @@ $$f(x,y) = f_X(x)f_Y(y)$$
 
 Þar sem jaðardreifingar eru gefnar með:
 
-$$
-\begin{aligned}
-    f_X(x) &= \int_{-\infty}^\infty f(x,y) dy \\
-    f_Y(y) &= \int_{-\infty}^\infty f(x,y) dx
-\end{aligned}
-$$
 
 $$ f_X(x) = \int_{-\infty}^\infty f(x,y) dy $$
-og 
+
+
 $$ f_Y(y) = \int_{-\infty}^\infty f(x,y) dx $$
