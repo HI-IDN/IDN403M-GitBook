@@ -71,7 +71,7 @@ $$
 $$
 
 > **Hvað þýðir jákvæð fylgni?**  
-> Ef $$\text{Cor}(X, Y) > 0$$ þá eykst $$Y$$ þegar $$X$$ hækkar. Ef $$\text{Cor}(X, Y) < 0$$ þá 
+> Ef $$\text{Cor}(X, Y) > 0$$ þá eykst $$Y$$ þegar $$X$$ hækkar. Ef $$\text{Cor}(X, Y) < 0$$ þá
 > lækkar $$Y$$ þegar $$X$$ hækkar.
 
 ### R dæmi um hermun á M/M/1 biðröð
@@ -139,7 +139,9 @@ compute_correlation <- function(waiting_times, max_lag = 10) {
   tibble(lag = 0:max_lag, correlation = correlation_values)
 }
 ```
+
 #### Dæmi 4.19 úr Law (2007)
+
 ```Rscript
 mean_interarrival <- 0.5;
 mean_service <- 1;
@@ -165,6 +167,17 @@ $$
 
 > **Dæmi:**  
 > Fyrir M/M/1 biðraðakerfi, ef fyrstu athuganir $$D_1, D_2, \ldots, D_k$$ eru fjarlægðar, þá getur
-> ferlið orðið með jafnvægis-samfylgni eftir ákveðinn tíma, þetta er kallað 
-> **upphitunarferli** (e. warm-up period).
+> ferlið orðið með jafnvægis-samfylgni eftir ákveðinn tíma.
 
+### Upphitunartími
+
+Í hermun á biðraðakerfum eins og M/M/1 getur ferlið byrjað í óstöðugu ástandi þar sem fyrstu
+athuganir eru ekki fulltrúar stöðugrar hegðunar kerfisins. Þetta er kallað upphitunartími (e.
+warm-up period).
+
+- Warm-up tími vísar til þess tímabils þar sem kerfið er ekki enn komið í jafnvægi.
+- Fyrstu mælingarnar í hermuninni geta verið skekktar vegna þess að kerfið byrjar í tómu ástandi eða
+  öðrum upphafsskilyrðum sem hafa áhrif á niðurstöður.
+- Þegar ákveðinn fjöldi fyrstu mælinga er fjarlægður ($$D_1, D_2, ..., D_k$$), þá hefur kerfið náð
+  jafnvægis-samfylgni, sem þýðir að dreifing breytanna er stöðug yfir tíma.
+- Þetta er gert til að tryggja að niðurstöður endurspegli langtímahegðun kerfisins.
