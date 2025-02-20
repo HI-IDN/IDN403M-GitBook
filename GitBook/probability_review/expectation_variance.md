@@ -182,7 +182,6 @@ warm-up period).
   jafnvægis-samfylgni, sem þýðir að dreifing breytanna er stöðug yfir tíma.
 - Þetta er gert til að tryggja að niðurstöður endurspegli langtímahegðun kerfisins.
 
-
 ---
 
 ## Mat á meðaltali, ferviki og fylgni
@@ -207,7 +206,8 @@ $$
 \text{Var}[\bar{X}(n)] = \frac{\sigma^2}{n}
 $$
 
-Þetta sýnir að þegar $$n$$ eykst, minnkar fervik úrtaksmeðaltalsins, sem þýðir að matið verður nákvæmara.
+Þetta sýnir að þegar $$n$$ eykst, minnkar fervik úrtaksmeðaltalsins, sem þýðir að matið verður
+nákvæmara.
 
 Óbjagað mat á ferviki er gefið með:
 
@@ -221,7 +221,8 @@ $$
 \widehat{\text{Var}}[\bar{X}(n)] = \frac{S^2(n)}{n}
 $$
 
-Ef úrtaksbreyturnar $$X_1, X_2, \dots$$ eru óháðar, þá er fylgnin núll. Hins vegar, í hermilíkönum er oft fylgni á milli mælinga ($$\rho_j > 0$$). Í þessu tilfelli er:
+Ef úrtaksbreyturnar $$X_1, X_2, \dots$$ eru óháðar, þá er fylgnin núll. Hins vegar, í hermilíkönum
+er oft fylgni á milli mælinga ($${\rho}_j > 0$$). Í þessu tilfelli er:
 
 $$
 E\bigg[\frac{S^2(n)}{n}\bigg] = \frac{\big[n/a(n)\big] - 1}{n - 1} \text{Var}[\bar{X}(n)]
@@ -233,13 +234,14 @@ $$
 a(n) = 1 + 2\sum_{j=1}^{n-1} \big(1 - j/n\big) \rho_j
 $$
 
-Ef $$\rho_j > 0$$, þá gildir $$a(n) > 1$$ og því er:
+Ef $${\rho}_j > 0$$, þá gildir $$a(n) > 1$$ og því er:
 
 $$
 E\bigg[\frac{S^2(n)}{n}\bigg] < \text{Var}[\bar{X}(n)] = \frac{\sigma^2}{n}
 $$
 
-Þetta þýðir að úrtaksfervik er oft vanmat á raunverulegu ferviki þegar breyturnar eru háðar.
+Þetta þýðir að úrtaksfervik er oft _vanmat_ á raunverulegu ferviki þegar breyturnar eru háðar,
+en úrtak hermilíkana eru nánast _alltaf_ háð.
 
 ### Mat á fylgni
 
@@ -252,6 +254,7 @@ $$
 Þetta mat á fylgni getur verið gagnlegt þegar unnið er með háðar mælingar, t.d. í hermilíkönum.
 
 #### R kóði fyrir fylgnireikninga
+
 ```Rscript
 # Reiknum fylgni fyrir mismunandi tímaskref
 compute_autocorrelation <- function(X, max_lag = 10) {
@@ -269,3 +272,18 @@ compute_autocorrelation <- function(X, max_lag = 10) {
   tibble(lag = 0:max_lag, correlation = rho)
 }
 ```
+
+Athugið að í fyrri útfærsla á fylgnireikningum hér að ofan var sérhæfð fyrir M/M/1 biðraðakerfi og
+byggði á hermun, þar sem biðtímar voru greindir yfir tíma. Í þessari útfærslu er fylgni metin á
+almennari hátt, án beinnar tengingar við biðraðakerfi, en með sömu undirliggjandi stærðfræðilegu
+nálgun.
+
+Munurinn felst í því hvernig gildin eru meðhöndluð:
+
+- Í fyrra dæminu var `max_lag` notað til að tryggja að sami fjöldi mælinga sé notaður í hverjum
+  útreikningi.
+- Í þessari útfærslu er lengd úrtaksins skekkt í hverju skrefi með `n - j`, sem getur haft áhrif á
+  matið á langtímafylgni.
+
+Þetta sýnir hvernig ólíkar nálganir við mat á fylgni geta haft mismunandi áhrif á niðurstöður og
+dregur fram mikilvægi þess að velja útreikninga sem hæfa því samhengi sem verið er að greina.
