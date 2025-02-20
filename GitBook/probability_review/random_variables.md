@@ -14,8 +14,9 @@ sem eru háðar hver annarri.
 ## Tilraun og útkomurúm
 
 > **Tilraun (e. experiment)** er aðferð sem skilar úrtaki sem er ekki þekkt með vissu.  
-> Mengi allra mögulegra úrtaka kallast **útkomurúm (e. sample space)** og er táknað með $$S$.  
-> Hvert mögulegt úrtak úr tilrauninni kallast **úrtakspunktur (e. sample point)** og er stak í $$S$.
+> Mengi allra mögulegra úrtaka kallast **útkomurúm (e. sample space)** og er táknað með $$S$$.  
+> Hvert mögulegt úrtak úr tilrauninni kallast **úrtakspunktur (e. sample point)** og er stak í 
+> $$S$$.
 
 **Dæmi:** Kasta teningi tvisvar.  
 Útkomurúmið er þá:
@@ -35,7 +36,7 @@ $$F(x) = P(X \le x)~~~\text{fyrir}~~~-\infty < x < \infty$$
 ### Eiginleikar dreififalls:
 
 1. $$0\leq F(x) \leq 1$$ fyrir öll $$x$.
-2. $$F(x)$$ er vaxandi, þ.e. $$x_1 < x_2 \Rightarrow F(x_1) \leq F(x_2)$.
+2. $$F(x)$$ er vaxandi, þ.e. $$x_1 < x_2 \Rightarrow F(x_1) \leq F(x_2)$$.
 3. $$\lim_{x\rightarrow \infty} F(x) = 1$$ og $$\lim_{x\rightarrow -\infty} F(x) = 0$$
 
 ---
@@ -51,7 +52,7 @@ og þessar líkur summast upp í einn:
 
 $$\sum_{i=1}^\infty p(x_i)= 1$$
 
-> **Líkindafall (e. probability mass function, PMF)** er táknað sem $$p(x)$.  
+> **Líkindafall (e. probability mass function, PMF)** er táknað sem $$p(x)$$.  
 > Það segir okkur hversu líklegt er að breytan taki tiltekið strjált gildi.
 
 **Dreififall fyrir strjálar breytur:**
