@@ -181,3 +181,91 @@ warm-up period).
 - Þegar ákveðinn fjöldi fyrstu mælinga er fjarlægður ($$D_1, D_2, ..., D_k$$), þá hefur kerfið náð
   jafnvægis-samfylgni, sem þýðir að dreifing breytanna er stöðug yfir tíma.
 - Þetta er gert til að tryggja að niðurstöður endurspegli langtímahegðun kerfisins.
+
+
+---
+
+## Mat á meðaltali, ferviki og fylgni
+
+Óbjagað mat á úrtaksmeðaltali (e. sample mean) er gefið með:
+
+$$
+\bar{X}(n) = \frac{1}{n} \sum_{i=1}^{n} X_i
+$$
+
+þar sem $$\bar{X}(n)$$ er slembibreyta. Óbjagað mat þýðir að:
+
+$$
+E[\bar{X}(n)] = \mu
+$$
+
+svo að væntigildi úrtaksmeðaltalsins er jafnt raunverulegu meðalgildi $$\mu$$.
+
+Til að meta hversu nálægt $$\bar{X}(n)$$ er sanna meðalgildinu, notum við fervik:
+
+$$
+\text{Var}[\bar{X}(n)] = \frac{\sigma^2}{n}
+$$
+
+Þetta sýnir að þegar $$n$$ eykst, minnkar fervik úrtaksmeðaltalsins, sem þýðir að matið verður nákvæmara.
+
+Óbjagað mat á ferviki er gefið með:
+
+$$
+S^2(n) = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \bar{X}(n))^2
+$$
+
+sem leiðir til mats á ferviki úrtaksmeðaltalsins:
+
+$$
+\widehat{\text{Var}}[\bar{X}(n)] = \frac{S^2(n)}{n}
+$$
+
+Ef úrtaksbreyturnar $$X_1, X_2, \dots$$ eru óháðar, þá er fylgnin núll. Hins vegar, í hermilíkönum er oft fylgni á milli mælinga ($$\rho_j > 0$$). Í þessu tilfelli er:
+
+$$
+E\bigg[\frac{S^2(n)}{n}\bigg] = \frac{\big[n/a(n)\big] - 1}{n - 1} \text{Var}[\bar{X}(n)]
+$$
+
+þar sem:
+
+$$
+a(n) = 1 + 2\sum_{j=1}^{n-1} \big(1 - j/n\big) \rho_j
+$$
+
+Ef $$\rho_j > 0$$, þá gildir $$a(n) > 1$$ og því er:
+
+$$
+E\bigg[\frac{S^2(n)}{n}\bigg] < \text{Var}[\bar{X}(n)] = \frac{\sigma^2}{n}
+$$
+
+Þetta þýðir að úrtaksfervik er oft vanmat á raunverulegu ferviki þegar breyturnar eru háðar.
+
+### Mat á fylgni
+
+Fylgni milli mælinga $$X_i$$ og $$X_{i+j}$$ má meta með:
+
+$$
+\hat{\rho}_j = \frac{1}{S^2(n)} \sum_{i=1}^{n-j} \frac{(X_i - \bar{X}(n))(X_{i+j} - \bar{X}(n))}{n - j}
+$$
+
+Þetta mat á fylgni getur verið gagnlegt þegar unnið er með háðar mælingar, t.d. í hermilíkönum.
+
+#### R kóði fyrir fylgnireikninga
+```Rscript
+# Reiknum fylgni fyrir mismunandi tímaskref
+compute_autocorrelation <- function(X, max_lag = 10) {
+  n <- length(X)
+  mu <- mean(X)
+  sigma2 <- var(X)
+  rho <- numeric(max_lag + 1)
+
+  for (j in 0:max_lag) {
+    X_i <- X[1:(n - j)]
+    X_j <- X[(1 + j):n]
+    rho[j + 1] <- sum((X_i - mu) * (X_j - mu)) / ((n - j) * sigma2)
+  }
+
+  tibble(lag = 0:max_lag, correlation = rho)
+}
+```
