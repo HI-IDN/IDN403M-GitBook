@@ -25,7 +25,7 @@
 ## Upprifjun á líkinda- og tölfræði
 * [Líkinda- og tölfræði](probability_review/probability_statistics.md)
 * [Slembibreytur og eiginleikar þeirra](probability_review/random_variables.md)
-* [Væntigildi og fervik](probability_review/expectation_variance.md)
+* [Væntigildi, fervik og fylgni](probability_review/expectation_variance.md)
 * [Tilgátupróf](probability_review/hypothesis_testing.md)
 
 ## Túlkun niðurstaðna
