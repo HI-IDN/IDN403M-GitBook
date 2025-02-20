@@ -72,33 +72,78 @@ $$
 > Ef $$\text{Cor}(X, Y) > 0$$ þá eykst $$Y$$ þegar $$X$$ hækkar. Ef $$\text{Cor}(X, Y) < 0$$ þá 
 > lækkar $$Y$$ þegar $$X$$ hækkar.
 
-### MATLAB dæmi um hermun á M/M/1 biðröð
+### R dæmi um hermun á M/M/1 biðröð
 
-```matlab
-% M/M/1 Kerfi, dæmi 4.19
-mean_interarrival = 0.5;
-mean_service = 1;
-rho = mean_service / mean_interarrival; % Hlutfallið rho
-X(1) = 0; % Fyrsti viðskiptavinur þarf ekki að bíða
+```Rscript 
+# Function to simulate an M/M/1 queue
+simulate_mm1 <- function(mean_interarrival, mean_service, n_customers, seed = 42) {
+  set.seed(seed)
 
-for i = 1:1000
-    S(i) = -mean_service * log(rand(1)); % Þjónustutími
-    A(i+1) = -mean_interarrival * log(rand(1)); % Millikomutími
-    X(i+1) = max([X(i) + S(i) - A(i+1), 0]); % Biðtími
-end
+  # Initialize vectors
+  A <- numeric(n_customers + 1)  # Interarrival times
+  S <- numeric(n_customers)  # Service times
+  X <- numeric(n_customers + 1)  # Waiting times
+
+  # Generate interarrival and service times using -mean * log(rand(1))
+  for (i in 1:n_customers) {
+    S[i] <- -mean_service * log(runif(1))  # Service time
+    A[i + 1] <- -mean_interarrival * log(runif(1))  # Interarrival time
+  }
+
+  # Compute waiting times
+  # Note, X[1] is initialized as 0, because there is no waiting time for the first customer
+  for (i in 1:n_customers) {
+    X[i + 1] <- max(X[i] + S[i] - A[i + 1], 0)
+  }
+
+  lambda <- 1 / mean_interarrival
+  mu <- 1 / mean_service
+
+  list(
+    sim = tibble(
+      customer = 1:n_customers,
+      waiting_time = X[-1]  # Exclude first value since it's initialized as 0
+    ),
+    lambda = lambda,
+    mu = mu,
+    w_theoretical = 1 / (mu - lambda),
+    num_customers = n_customers,
+    scenario_label = paste0("lambda == ", round(lambda, 2), "~~~ mu == ", round(mu, 2))
+  )
+}
 ```
 
-### Reiknum fylgni á biðtíma
+#### Reiknum fylgni á biðtíma
 
-```matlab
-m = 10;
-for j = 0:m
-    X_i = X(1:end-m);
-    X_j = X((1+j):end-m+j);
-    mu_i = mean(X_i); sigma2_i = var(X_i);
-    mu_j = mean(X_j); sigma2_j = var(X_j);
-    rho(j+1) = (mean(X_i .* X_j) - mu_i * mu_j) / sqrt(sigma2_i * sigma2_j);
-end
+```Rscript
+# Function to compute lagged correlation of waiting times
+compute_correlation <- function(waiting_times, max_lag = 10) {
+  n <- length(waiting_times)
+
+  correlation_values <- numeric(max_lag + 1)
+
+  for (j in 0:max_lag) {
+    X_i <- waiting_times[1:(n - max_lag)]
+    X_j <- waiting_times[(1 + j):(n - max_lag + j)]
+
+    mu_i <- mean(X_i)
+    mu_j <- mean(X_j)
+    sigma2_i <- var(X_i)
+    sigma2_j <- var(X_j)
+
+    correlation_values[j + 1] <- (mean(X_i * X_j) - mu_i * mu_j) / sqrt(sigma2_i * sigma2_j)
+  }
+
+  tibble(lag = 0:max_lag, correlation = correlation_values)
+}
+```
+#### Dæmi 4.19 úr Law (2007)
+```Rscript
+mean_interarrival <- 0.5;
+mean_service <- 1;
+rho <- mean_service / mean_interarrival;
+sim_data <- simulate_mm1(mean_interarrival, mean_service, 1000)
+corr_data <- compute_correlation(simdata$sim$waiting_times, 10)
 ```
 
 ![Fylgni fall fyrir $$D_1, D_2, \ldots, D_k$$ athuganir fyrir M/M/1](figs/figure_410.jpg)
