@@ -28,6 +28,16 @@
 * [Væntigildi, fervik og fylgni](probability_review/expectation_variance.md)
 * [Tilgátupróf](probability_review/hypothesis_testing.md)
 
+## Mat á breytileika fyrir hermilíkön
+* [Mat á breytileika](results_analysis/variability_analysis.md)
+* [Samfelldar líkindadreifingar](results_analysis/continuous_distributions.md)
+* [Strjálar líkindadreifingar](results_analysis/discrete_distributions.md)
+* [Val á líkindadreifingum](results_analysis/distribution_selection.md)
+* [Raundreifingar og dreififöll](results_analysis/empirical_distributions.md)
+* [Óhæði gagna og fylgni](results_analysis/independence_correlation.md)
+* [Sennileikamat og mátunarpróf](results_analysis/likelihood_fitting.md)
+* [Hliðruð dreifing og áætlanir þegar gögn vantar](results_analysis/truncated_distributions.md)
+
 ## Túlkun niðurstaðna
 * [Hvað vilt þú vita um kerfið?](results_interpretation/what_to_know.md)
 * [Tölfræðilegir eiginleikar úttaks hermilíkans](results_interpretation/statistical_properties.md)
