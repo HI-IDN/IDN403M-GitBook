@@ -11,9 +11,10 @@ við raunveruleg gögn.
 Slík próf eru mikilvæg fyrir gagngreiningu þar sem við viljum sannprófa hvort gögnin okkar fylgi
 fræðilegri dreifingu.
 
-## $\chi^2$-próf (Chi-Square Test)
+## $$\chi^2$$-próf (Chi-Square Test)
 
-Chi-Square mátunarprófið metur hvort dreifing gagna passar við væntingar:
+Kí-kvaðrat mátunarpróf, eða $$\chi^2$$-mátunarpróf, metur hvort dreifing gagna passar við 
+væntingar:
 
 1. Skiptum gögnunum upp í bil $$[a_0, a_1), [a_1, a_2), \dots, [a_{k-1}, a_k)$$.
 2. Fjöldi mælinga í hverju bili er $$N_j$$.
