@@ -76,7 +76,21 @@ $$ \tilde{\alpha}_2 = \frac{(b-\mu) \tilde{\alpha}_1}{\mu-a} $$
 **Vænlegra er oft að nota Weibull eða lognormlega dreifingu**, þar sem þær veita betri nálgun
 fyrir gögn sem hafa takmarkað svið eða skekkjast sterklega.
 
-### Dæmi um hliðrun í dreifingu
+### Dæmi, nálgun á lognormal dreifingu:
+
+![Nálgun á logranormlega dreifingu](figs/nodata.jpg)
+
+Vænlegra er að nota Weibull eða lognormal dreifingu. Til þess að
+geta metið þær þarf að áætla *staðsetninga stika* $$\gamma$$, algengasta
+gildi $$m$$, og hundraðasta $$q$$-hlutfallsmark (e. quantile) $$x_q$$ (e
+$$100q$$th percentile). Stikinn $$\gamma$$ hegðar sér eins og neðri mörkin
+$$a$$, auk þess gerum við ráð fyrir að $$0\le\gamma<m<x_q<\infty$$.
+
+-   $$\text{\bf LN}(\gamma,\mu,\sigma^2)$$ (lognormal dreifing), sjá
+    jöfnur 6.16 til 6.19 í Law (2007).
+
+-   $$\text{\bf Weibull}(\gamma,\alpha,\beta)$$ (Weibull) sjá jöfnur 6.20
+    til 6.23 í Law (2007).
 
 Við getum hliðrað dreifingu í R með því að nota staðsetningarstika $$\gamma$$:
 
