@@ -73,10 +73,10 @@ $$ \tilde{\alpha}_1 = \frac{(\mu-a)(2m-a-b)}{(m-\mu)(b-a)} $$
 
 $$ \tilde{\alpha}_2 = \frac{(b-\mu) \tilde{\alpha}_1}{\mu-a} $$
 
-**Vænlegra er oft að nota Weibull eða lognormlega dreifingu**, þar sem þær veita betri nálgun
-fyrir gögn sem hafa takmarkað svið eða skekkjast sterklega.
 
 ### Dæmi, nálgun á lognormal dreifingu:
+**Vænlegra er oft að nota Weibull eða lognormlega dreifingu**, þar sem þær veita betri nálgun
+fyrir gögn sem hafa takmarkað svið eða skekkjast sterklega.
 
 ![Nálgun á logranormlega dreifingu](figs/nodata.jpg)
 
