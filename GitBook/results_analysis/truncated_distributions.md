@@ -57,9 +57,7 @@ staðsetningarstika:
 ![Staðsetningarstikarit fyrir hliðraða dreifingu í ExpertFit](figs/shifted_distribution_expertfit.png)
 
 
----
-
-## Þegar gögn vantar: Hvernig á að velja dreifingu?
+# Þegar gögn vantar: Hvernig á að velja dreifingu?
 
 Ef ekki eru nægileg gögn til að ákvarða dreifingu nákvæmlega, getur verið gagnlegt að nota
 nálgunaraðferðir með fræðilegum dreifingum.
@@ -71,10 +69,10 @@ dreifingarnar skilgreindar sem:
 - **Þríhyrnd dreifing**: $$\text{Triang}(a, b, m)$$
 - **Beta dreifing** með gefnu meðaltali $$\mu$$:
 
-\[ \tilde{\alpha}_1 = \frac{(\mu-a)(2m-a-b)}{(m-\mu)(b-a)} \]
-\[ \tilde{\alpha}_2 = \frac{(b-\mu) \tilde{\alpha}_1}{\mu-a} \]
+$$ \tilde{\alpha}_1 = \frac{(\mu-a)(2m-a-b)}{(m-\mu)(b-a)} $$
+$$ \tilde{\alpha}_2 = \frac{(b-\mu) \tilde{\alpha}_1}{\mu-a} $$
 
-**Vænlegra er oft að nota Weibull eða logranormlega dreifingu**, þar sem þær veita betri nálgun
+**Vænlegra er oft að nota Weibull eða lognormlega dreifingu**, þar sem þær veita betri nálgun
 fyrir gögn sem hafa takmarkað svið eða skekkjast sterklega.
 
 ### Dæmi um hliðrun í dreifingu
@@ -82,19 +80,18 @@ fyrir gögn sem hafa takmarkað svið eða skekkjast sterklega.
 Við getum hliðrað dreifingu í R með því að nota staðsetningarstika $$\gamma$$:
 
 ```r
-# Búa til gervigögn
 set.seed(42)
 X <- rweibull(100, shape = 2, scale = 5) + 30  # Hliðrun um gamma = 30
 
 # Teikna Weibull dreifingu með hliðrun
 library(ggplot2)
+k <- floor(1 + log2(length(X)))  # Sturges regla
 ggplot(data.frame(X), aes(x = X)) +
-  geom_histogram(aes(y = ..density..), bins = 20, fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_histogram(aes(y = ..density..), bins = k, fill = "lightgrey", color = "black", alpha = 0.7) +
   stat_function(fun = function(x) dweibull(x - 30, shape = 2, scale = 5),
                 color = "red", size = 1) +
   labs(title = "Hliðruð Weibull dreifing", x = "Gildi", y = "Þéttleiki") +
   theme_minimal()
 ```
 
-
-
+![Hliðruð Weibull dreifing](figs/distribution_shifted.jpg)
