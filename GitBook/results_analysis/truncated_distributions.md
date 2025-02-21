@@ -1,6 +1,6 @@
 ---
-description: ->
-  Hliðruð dreifing er öflug aðferð til að bæta líkanagerð þegar gögn sýna skekkjun eða hafa náttúruleg neðri mörk. Með réttum staðsetningarstika getur verið hægt að nota klassískar dreifingar með meiri nákvæmni og bætt aðlögun að raunverulegum gögnum.
+description: >-
+  Hliðruð dreifing aðlagar klassískar dreifingar að gögnum með skekkju eða náttúrulegum neðri mörkum, sem eykur nákvæmni í líkanagerð
 ---
 
 # Hliðruð dreifing (e. shifted distribution)
@@ -70,6 +70,7 @@ dreifingarnar skilgreindar sem:
 - **Beta dreifing** með gefnu meðaltali $$\mu$$:
 
 $$ \tilde{\alpha}_1 = \frac{(\mu-a)(2m-a-b)}{(m-\mu)(b-a)} $$
+
 $$ \tilde{\alpha}_2 = \frac{(b-\mu) \tilde{\alpha}_1}{\mu-a} $$
 
 **Vænlegra er oft að nota Weibull eða lognormlega dreifingu**, þar sem þær veita betri nálgun
