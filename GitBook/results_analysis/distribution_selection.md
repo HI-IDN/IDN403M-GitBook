@@ -1,95 +1,123 @@
 ---
 description: >-
-  Greining á vali líkindadreifinga fyrir hermilíkön, aðferðir til að meta breytileika
-  og samanburður á fræðilegum og raunmældum dreifingum.
+  Þegar gert er ráð fyrir að gögn fylgi tiltekinni líkindadreifingu er mikilvægt
+  að velja viðeigandi dreifingu, þetta er framkvæmt í þremur lykilskrefum.
 ---
 
-# Mat á breytileika fyrir hermilíkön
+Ferlið við að velja viðeigandi líkindadreifingu fyrir gögn er mikilvægt skref í tölfræðilegri
+greiningu. Rétt dreifing getur bætt líkanagerð og leitt til nákvæmari niðurstaðna.
 
-Í hermun er mikilvægt að skilja hvaða breytur eru slembnar og hvernig þær dreifast.
-Kafli 6. í Law (2007) fjallar um val á inntaksdreifingum, aðferðir til að meta þær og 
-samanburð milli fræðilegra og raunmældra dreifinga.
+Val á dreifingu skiptist í þrjú lykilskref:
 
-## Inntak, virkni og frálag í hermun
-
-- **Ílag hermilíkana:** Hvaða slembibreytur stýra hegðun kerfisins?
-- **Virkni hermilíkana:** Hvernig eru slembibreyturnar notaðar í líkaninu?
-- **Frálag hermilíkana:** Hvernig túlka niðurstöður hermunarinnar og hvaða áhrif hefur val á
-  dreifingum?
-
----
-
-## Val á inntaks líkindadreifingum
-
-Til að framkvæma hermun þarf að skilgreina slembibreytur sem inntak. Þessar slembibreytur fylgja
-einhverri líkindadreifingu sem getur verið valin á grundvelli mælinga eða eftir eðli
-viðfangsefnisins.
-
-> **Dæmi:** Framleiðslukerfi gæti haft slembibreytur eins og vinnslutíma og bilanatíðni, en
-> flutningskerfi gæti innihaldið millikomutíma farþega og lestunartíma skips.
-
-### Algengar uppsprettur slembibreyta
-
-| Tegund kerfis | Uppspretta hendingar                                   |
-|---------------|--------------------------------------------------------|
-| Framleiðsla   | Vinnslutími, bilanatíðni véla, viðgerðatími véla       |
-| Fjarskipti    | Millikomutími skilaboða, tegund skeytis, lengd skeytis |
-| Flutningur    | Lestunartími skips, millikomutími farþega              |
-
-Það er nauðsynlegt að lýsa hverri hendingu með **dreifingu**, en ekki einungis með meðaltali.
+1. **Ágiskun á fjölskyldu af dreifingum** – Gróf flokkun byggð á lögun gagna.
+2. **Sennileikamat (*Maximum Likelihood Estimation, MLE*) á stikum** – Aðferð til að áætla stika
+   dreifingarinnar.
+3. **Mat á hversu vel tókst að máta dreifingu** – Prófanir á hversu vel dreifingin passar við
+   gögnin.
 
 ---
 
-## Aðferðir til að tilgreina líkindadreifingu
+## Ágiskun á fjölskyldu af dreifingum
 
-Til að velja rétta dreifingu fyrir hermun er hægt að nota nokkrar aðferðir:
+Við val á líkindadreifingu er gott að skoða grunnupplýsingar um gögnin:
 
-1. **Söguleg gögn (raunmælingar):**
-    - Notað þegar nægileg gögn eru til staðar.
-    - Getur verið erfitt ef gögn eru takmörkuð, en gagnlegt fyrir sannprófun á hermunarlíkani.
+- **Neðsta og hæsta gildi**: Metur svið gagna.
+- **Meðalgildi**: Gefur vísbendingu um miðju dreifingarinnar.
+- **Miðgildi**: Minni áhrif frá útgildum en meðaltal.
+- **Fervik (*variance*)**: Mælir breytileika í gögnunum.
+- **Skeifni (*skewness*)**: Mælir hvort dreifingin er ósamhverf.
+- **Fráviksstuðull (*coefficient of variation, CV*)**: Hentar fyrir samfelldar dreifingar.
+- **Lexis hlutfall**: Hentar fyrir strjálar dreifingar.
 
-2. **Raundreifingarfall (empirical distribution function):**
-    - Svipað og notkun sögulegra gagna en gerir kleift að mynda fleiri gervimælingar innan
-      mælibilsins.
+Til dæmis ef dreifingin er samfelld og $$CV \approx 1$$ þá er hugsanlega um
+veldisdreifingu að ræða, sjá nánari umfjöllun í kafla 6.4.1 í Law (2007).
 
-3. **Aðlögun fræðilegs dreififalls að mælingum:**
-    - Velja fræðilega dreifingu eins og veldisdreifingu eða Poisson-dreifingu ef hún lýsir gögnum
-      vel.
-    - Notað þegar fræðileg rök styðja slíka nálgun.
+### R-kóði til að reikna þessa tölfræðilegu eiginleika:
 
-> **Hvaða aðferð er best?** Ef mælingar eru nægar, þá er raundreifing skynsamleg. Ef kerfið fylgir
-> fræðilegum rökum (t.d. M/M/1 líkan) þá er fræðileg dreifing æskileg.
+```r
+set.seed(42)
+data <- rnorm(100, mean = 50, sd = 10) # Slembigögn með normaldreifingu
 
----
+summary_stats <- data.frame(
+  Min = min(data),
+  Max = max(data),
+  Mean = mean(data),
+  Median = median(data),
+  Variance = var(data),
+  Skewness = e1071::skewness(data)
+)
+```
 
-## Fræðilegar vs. raunmældar dreifingar
-
-| Samanburður                        | Fræðilegar dreifingar      | Raundreifingar                  |
-|------------------------------------|----------------------------|---------------------------------|
-| Jafnar út sveiflur?                | Já                         | Nei, sérstaklega ef gögn eru fá |
-| Getur myndað gildi utan mælisviðs? | Já                         | Nei                             |
-| Hentug þegar gögn vantar?          | Já                         | Nei                             |
-| Hægt að nota fyrir öfgagildi?      | Já, með stýfðum dreifingum | Nei                             |
-
-> **Dæmi:** Ef unnið er með þjónustutíma í afgreiðslukerfi og hámarkstíminn er 15 mínútur, þá getur
-> fræðileg dreifing (t.d. normaldreifing) gefið óraunhæf gildi. Í slíku tilviki er betra að nota
-> stýfða dreifingu (truncated distribution).
-
-Stýfð dreifing er reiknuð sem:
-
-$$
-f^*(x) = \frac{f(x)}{F(b)}, \quad 0 \leq x \leq b
-$$
-
-þar sem $$F(b) = \int_0^b f(x)dx < 1$$ takmarkar hæstu mögulegu gildin.
+| Lágmark (Min) | Hámark (Max) | Meðaltal (Mean) | Miðgildi (Median) | Fervik (Variance) | Skeifni (Skewness) |
+|---------------|--------------|-----------------|-------------------|-------------------|--------------------|
+| 20.0691       | 72.86645     | 50.32515        | 50.89797          | 108.4424          | -0.4689891         |
 
 ---
 
-## Niðurstaða
+## Myndrænar aðferðir til að skoða lögun dreifingar
 
-Val á líkindadreifingu skiptir miklu máli í hermun. Með því að velja rétta dreifingu fyrir inntak,
-tryggjum við að hermunarlíkanið endurspegli raunveruleikann eins nákvæmlega og mögulegt er.
+Myndræn framsetning getur hjálpað við val á dreifingu. Hér eru tvær gagnlegar aðferðir:
 
-> **Góð regla:** Ef mælingar eru til, prófaðu fyrst að nota raunmælda dreifingu. Ef þær passa illa
-> við fyrri þekkingu á kerfinu, prófaðu aðlögun við fræðilega dreifingu.
+### 1. **Stuðlarit (*Histogram*)** til að skoða lögun gagna:
 
+```r
+k <- floor(1 + log2(length(data))) # Regla Sturges fyrir fjölda stöpla í stöplariti
+ggplot(data.frame(data), aes(x = data)) +
+  geom_histogram(aes(y = ..density..), bins = k, fill = "lightgrey", color = "black") +
+  geom_density(color = "red", size = 1) +
+  labs(title = "Stöplarit með þéttleikafalli", x = "Gildi", y = "Þéttleiki") +
+  theme_minimal()
+```
+
+![Stöplarit með þéttleikafalli](figs/distribution_histogram.jpg)
+
+Myndin sýnir stöplarit með þéttleikafalli fyrir slembigögn með normaldreifingu. Fjöldi stöpla er
+reiknað út frá reglu Sturges. Raundreififallið, $$F(x)$$ fyrir gögnin er sýnt með rauðri línu.
+
+#### Fjöldi stöpla í stöplariti
+
+Til eru nokkrar leiðir til að ákvarða fjölda stöpla í stöplariti, g.r.f. að
+$$n$$ er fjöldi gilda í gagnasafninu:
+
+- **Regla Sturges**: $$ k = \lfloor 1 + \log_2(n)  \rfloor $$
+- **Regla Scott's normal reference**, $$k = \lfloor 3.5 \hat{\sigma} / \sqrt[3]{n}\rfloor$$
+- **Regla Freedman Diaconis**: $$k = \lfloor 2\times  IQR(X) / \sqrt[3]{n}\rfloor$$ þar sem IQR
+  er fjarlægð milli fjórðungsmarka (Interquartile Range, þ.e. $$IQR=Q_3-Q_1$$). Það er minna
+  viðkvæmt fyrir útliggjandi gildi en Regla Scott's.
+
+#### Aðrar athuganir
+
+- Æskilegt að vera með bil með sömu breidd, $$\Delta b =
+  b_{j}-b_{j-1}$$ sem gæti þýtt að henda þurfi út gildum sem eru
+  óhemjustór eða lítil.
+
+- $$P(b_{j-1}\le X < b_j) =
+  \int_{b_{j-1}}^{b_j}f(x)dx=\Delta b f(y)\approx h_j$$ þar sem
+  $$y\in(b_{j-1},b_j)$$
+
+- Ef stöplarit er með fleiri en eina kryppu getur verið nauðsynlegt að
+  nota blöndu af fleiri en einni dreifingu, t.d. tvær kryppur:
+  $$f(x) = p_1 f_1(x) + p_2 f_2(x)$$
+
+### 2. **Q-Q línurit** til að meta hvort gögn fylgi normaldreifingu:
+
+```r
+ggplot(data.frame(sample = data), aes(sample = sample)) +
+  stat_qq() +
+  stat_qq_line(color = "red") +
+  labs(title = "Q-Q línurit fyrir normaldreifingu") +
+  theme_minimal()
+```
+
+![Q-Q línurit fyrir normaldreifingu](figs/distribution_qq.jpg)
+
+Á myndinni sést Q-Q línurit fyrir slembigögn með normaldreifingu. Ef punktar liggja á rauðu línunni
+er líkindi á því að gögnin fylgi normaldreifingu.
+
+
+---
+
+## Næstu skref: Mat á hversu vel dreifing passar við gögn
+
+Þegar búið er að velja fjölskyldu dreifingar má nota tölfræðilegar prófanir (t.d. Kolmogorov-Smirnov
+próf eða Anderson-Darling próf) til að sannreyna dreifinguna.
