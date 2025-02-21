@@ -29,11 +29,12 @@
 * [Tilgátupróf](probability_review/hypothesis_testing.md)
 
 ## Mat á breytileika fyrir hermilíkön
-* [Val á líkindadreifingum](results_analysis/distribution_selection.md)
+* [Breytileiki í hermilíkönunum](results_analysis/about_distribution_selection.md)
 * [Samfelldar líkindadreifingar](results_analysis/continuous_distributions.md)
 * [Strjálar líkindadreifingar](results_analysis/discrete_distributions.md)
 * [Raundreifingar og dreififöll](results_analysis/empirical_distributions.md)
 * [Óhæði gagna og fylgni](results_analysis/independence_correlation.md)
+* [Val á líkindadreifingum](results_analysis/distribution_selection.md)
 * [Sennileikamat og mátunarpróf](results_analysis/likelihood_fitting.md)
 * [Hliðruð dreifing og áætlanir þegar gögn vantar](results_analysis/truncated_distributions.md)
 
