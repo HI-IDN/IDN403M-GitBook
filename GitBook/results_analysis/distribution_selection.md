@@ -82,18 +82,16 @@ $$n$$ er fjöldi gilda í gagnasafninu:
 - **Regla Sturges**: $$ k = \lfloor 1 + \log_2(n)  \rfloor $$
 - **Regla Scott's normal reference**, $$k = \lfloor 3.5 \hat{\sigma} / \sqrt[3]{n}\rfloor$$
 - **Regla Freedman Diaconis**: $$k = \lfloor 2\times  IQR(X) / \sqrt[3]{n}\rfloor$$ þar sem IQR
-  er fjarlægð milli fjórðungsmarka (Interquartile Range, þ.e. $$IQR=Q_3-Q_1$$). Það er minna
-  viðkvæmt fyrir útliggjandi gildi en Regla Scott's.
+  er fjarlægð milli fjórðungsmarka (e. interquartile range, þ.e. $$IQR=Q_3-Q_1$$). Það er minna
+  viðkvæmt fyrir útlögum en Regla Scott's.
 
 #### Aðrar athuganir
 
-- Æskilegt að vera með bil með sömu breidd, $$\Delta b =
-  b_{j}-b_{j-1}$$ sem gæti þýtt að henda þurfi út gildum sem eru
-  óhemjustór eða lítil.
+- Æskilegt að vera með bil með sömu breidd, $$\Delta b = b_{j}-b_{j-1}$$ sem gæti þýtt að henda 
+  þurfi út gildum sem eru óhemjustór eða lítil.
 
-- $$P(b_{j-1}\le X < b_j) =
-  \int_{b_{j-1}}^{b_j}f(x)dx=\Delta b f(y)\approx h_j$$ þar sem
-  $$y\in(b_{j-1},b_j)$$
+- $$P(b_{j-1}\le X < b_j) = \int_{b_{j-1}}^{b_j}f(x)dx=\Delta b f(y)\approx h_j$$ 
+  þar sem $$y\in(b_{j-1},b_j)$$
 
 - Ef stöplarit er með fleiri en eina kryppu getur verið nauðsynlegt að
   nota blöndu af fleiri en einni dreifingu, t.d. tvær kryppur:
