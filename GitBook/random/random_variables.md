@@ -128,7 +128,7 @@ $$  X = -\frac{\ln U}{\lambda} $$
 
 📖 **Tilvísun**: Law (2007), kafli **8.2.4**
 
-### Hvernig virkar höfnunarval fyrir Beta(2,5) dreifingu?
+#### Hvernig virkar höfnunarval fyrir Beta(2,5) dreifingu?
 
 Beta(2,5) dreifingin er skekkt til hægri og hefur þéttleikafall sem erfitt er að mynda með einföldum
 umbreytingum frá jafndreifingu. Þar sem *engin einföld andhverfa er til staðar* fyrir dreififall 
@@ -161,7 +161,7 @@ við sama bil. Höfnunarval virkar með því að:
 
 þar sem $$ U_1, U_2 \sum \mathcal{U}[0,1] $$.
 
-📖 **Tilvísun**: Law (2007), kafli **8.2.3**
+📖 **Tilvísun**: Law (2007), kafli **8.3.6**
 
 ![Box-Muller umbreyting](figs/box_muller.jpg)
 
