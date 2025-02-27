@@ -38,6 +38,12 @@
 * [Sennileikamat og mátunarpróf](results_analysis/likelihood_fitting.md)
 * [Hliðruð dreifing og áætlanir þegar gögn vantar](results_analysis/truncated_distributions.md)
 
+## Slembitölur og slembitölugjafar
+* [Hendingar og LCG-aðferðin](random/random_variables.md)
+* [Slembibreytur og dreifingar](random/random_variates.md)
+* [Prófun á slembitölum](random/random_number_testing.md)
+* [Strjálar dreifingar](random/discrete_random.md)
+
 ## Túlkun niðurstaðna
 * [Hvað vilt þú vita um kerfið?](results_interpretation/what_to_know.md)
 * [Tölfræðilegir eiginleikar úttaks hermilíkans](results_interpretation/statistical_properties.md)
