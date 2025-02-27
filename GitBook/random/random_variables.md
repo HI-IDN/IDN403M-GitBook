@@ -1,6 +1,8 @@
 ---
 description: >-
-  Inngangur að hendingum og hvernig þær eru notaðar í hermilíkönum. Fjallað er um línulegan samfelldan hendingaframleiðara (LCG), eiginleika hans og hvernig tryggja má löng tímabil án endurtekninga. Samanburður við jöfna (rectangular) og veldisdreifingu.
+  Inngangur að hendingum og hvernig þær eru notaðar í hermilíkönum. Fjallað er um línulegan 
+  samfelldan slembiframkallara (LCG), eiginleika hans og hvernig tryggja má löng tímabil án 
+  endurtekninga. 
 ---
 
 # Hendingar og LCG-aðferðin
@@ -13,9 +15,9 @@ Hermilíkön þurfa hendingar til að líkja eftir óvissu í raunheiminum. Dæm
 - Bilunartími véla í verksmiðju.
 - Eftirspurn eftir vörum.
 
-### Línulegur samfelldur hendingaframleiðari (LCG)
+### Línulegur samfelldur slembiframkallari (LCG)
 
-LCG (*Linear Congruential Generator*) er algeng reikniaðferð sem býr til *gervi hendingar* 
+LCG (*Linear Congruential Generator*) er algeng reikniaðferð sem býr til *gervi hendingar*
 (e. pseudo random) með jöfnu formi:
 
 $$
@@ -29,7 +31,27 @@ $$
 - $$c$$ er viðbót,
 - $$Z_0$$ er fræsgildi (e. seed) þ.e. upphafsgildi.
 
-Sjá nánar kafla 7.2 í Law (2007).
+### Tímabil og mikilvægi góðrar stillingar
+
+Línulegir samfelldir slembiframkallarar geta haft *mismunandi lengd á tímabilum sínum*, sem
+ákvarðar hversu margar hendingar er hægt að framleiða áður en þær byrja að endurtaka sig.
+
+Ef $$m$$, $$a$$, og $$c$$ eru ekki rétt valin, getur LCG orðið *ófullnægjandi* vegna:
+
+- Stutts tímabils (endurtekur sig fljótt).
+- Hárrar fylgni milli framleiddra talna.
+- Ójafnrar dreifingar yfir bilið $$[0,1]$$.
+
+Til að tryggja *góðan LCG-framkallara* eru nokkrar vel þekktar stillingar notaðar:
+
+| Nafn                                       | $$a$$      | $$c$$      | $$m$$          |
+|--------------------------------------------|------------|------------|----------------|
+| **Numerical Recipes** (Press et al., 1992) | 1664525    | 1013904223 | $$2^{32}$$     |
+| **MINSTD** (Park & Miller, 1988)           | 16807      | 0          | $$2^{31} - 1$$ |
+| **GCC rand()**                             | 1103515245 | 12345      | $$2^{31}$$     |
+
+Í kafla 7.2 í Law (2007) er fjallað um hvernig *stórt gildi á $$m$$ og val á $$a$$ með réttum
+eiginleikum* tryggir *löng tímabil og betri gæði slembitalna*.
 
 ---
 
@@ -77,14 +99,9 @@ Myndin sýnir *samanburð á stöplariti LCG og `rexp()`*, þar sem rauða lína
 fræðilega veldisdreifingu.
 
 
----
-
-## Tímabil og mikilvægi góðrar stillingar
-
-- Ef LCG er illa valinn endurtekur hann sig of snemma.
-- Gott val á $$m$$, $$a$$ og $$c$$ tryggir löng tímabil.
-- Notað í tölfræðilegum prófunum til að tryggja gæði.
-
-### Heimildir
-
-- Law (2007), kafli 7.2.
+## Heimildir
+- **Law, A. M.** (2007). *Simulation Modeling and Analysis* (4th ed.). McGraw-Hill.
+- **Park, S. K., & Miller, K. W.** (1988). *Random number generators: Good ones are hard to find*. 
+  Communications of the ACM, 31(10), 1192-1201. https://doi.org/10.1145/63039.63042  
+- **Teukolsky, S. A., Flannery, B. P., Press, W., & Vetterling, W.** (1992). *Numerical Recipes in 
+  C*. SMR, 693(1), 59-70.
