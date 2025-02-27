@@ -97,8 +97,8 @@ umbreytt í veldisdreifingu og borin saman við `rexp()`**.
 
 ![Samanburður á veldisdreifingu](figs/expon_comparison.jpg)
 
-Myndin sýnir *samanburð á stöplariti LCG og `rexp()`*, þar sem rauða línan táknar
-fræðilega veldisdreifingu.
+Myndin sýnir *samanburð á stöplariti LCG og `rexp()`*, þar sem línan táknar fræðilega
+veldisdreifingu.
 
 ## Heimildir
 

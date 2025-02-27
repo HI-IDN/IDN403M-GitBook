@@ -1,7 +1,5 @@
 # Athuga hvort slembigögnin fylgi fræðilegri veldisdreifingu með LCG-aðferð
 library(ggplot2)
-# Fjöldi stöpla í histogram
-k_sturges <- function(n) {  round(1 + log2(n)) }
 
 # Línulegur samfelldur hendingaframleiðari (LCG)
 lcg <- function(n, seed = 42, a = 1664525, c = 1013904223, m = 2^32) {
@@ -33,7 +31,7 @@ uniform_data <- data.frame(
 
 # Teikna samanburð á LCG og runif() í sama grafinu með ggplot
 p1 <- ggplot(uniform_data, aes(x = value, fill = type)) +
-  geom_histogram(aes(y = after_stat(density)), bins = k_sturges(n), alpha = 0.5, position = "identity") +
+  geom_histogram(aes(y = after_stat(density)), bins = 50, alpha = 0.5, position = "identity") +
   stat_function(fun = dunif, args = list(min = 0, max = 1), linewidth = 1, inherit.aes = FALSE) +
   ggtitle("Jafndreifing: LCG vs runif()") +
   xlab("Gildi") + ylab("Líkindi") +
@@ -53,7 +51,7 @@ exponential_data <- data.frame(
 
 # Teikna samanburð á veldisdreifingu í sama grafinu með ggplot
 p2 <- ggplot(exponential_data, aes(x = value, fill = type)) +
-  geom_histogram(aes(y = after_stat(density)), bins = k_sturges(n), alpha = 0.5, position = "identity") +
+  geom_histogram(aes(y = after_stat(density)), bins = 50, alpha = 0.5, position = "identity") +
   stat_function(fun = dexp, args = list(rate = lambda), linewidth = 1, inherit.aes = FALSE) +
   ggtitle("Veldisdreifing: LCG vs rexp()") +
   xlab("Gildi") + ylab("Líkindi") +
