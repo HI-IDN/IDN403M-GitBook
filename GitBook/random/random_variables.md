@@ -48,9 +48,14 @@ Til að tryggja *góðan LCG-framkallara* eru nokkrar vel þekktar stillingar no
 |--------------------------------------------|------------|------------|----------------|
 | **Numerical Recipes** (Press et al., 1992) | 1664525    | 1013904223 | $$2^{32}$$     |
 | **MINSTD** (Park & Miller, 1988)           | 16807      | 0          | $$2^{31} - 1$$ |
-| **GCC rand()**                             | 1103515245 | 12345      | $$2^{31}$$     |
+| **GCC** `rand()`                           | 1103515245 | 12345      | $$2^{31}$$     |
 
-Í kafla 7.2 í Law (2007) er fjallað um hvernig *stórt gildi á $$m$$ og val á $$a$$ með réttum
+LCG reikniritið sem notað er í GCC `rand()` kemur frá eldri BSD-kerfum og er útfært í GNU C
+Library (glibc). Það hefur stutt tímabil og er þekkt fyrir að framleiða tölur með fylgni á milli
+þeirra, svo það er ekki mælt með því fyrir vísindalega hermun. Sjá glibc source code og ISO C
+Standard fyrir frekari upplýsingar.
+
+> Í kafla 7.2 í Law (2007) er fjallað um hvernig *stórt gildi á $$m$$ og val á $$a$$ með réttum
 eiginleikum* tryggir *löng tímabil og betri gæði slembitalna*.
 
 ---
@@ -61,14 +66,14 @@ Jöfn dreifing (*continuous uniform distribution* eða *rectangular distribution
 öll gildi á ákveðnu bili eru jafn líkleg.
 
 LCG-aðferðin er oft notuð til að búa til hendingar sem fylgja *jöfnu dreifingu á bilinu $$[0,1]$$*.
-Til að athuga hvort slembitalnaframleiðari virki rétt, má bera saman:
+Til að athuga hvort slembitöluframkallari virki rétt, má bera saman:
 
 - **LCG-framleiðslu á jöfnum hendingum** við
-- **Innbyggða `runif()` fallið í R** sem notar nútíma slembitalnaframleiðara (*Mersenne Twister*).
+- **Innbyggða `runif()` fallið í R** sem notar nútíma slembitöluframkallara (*Mersenne Twister*).
 
 ![Samanburður á rétthyrndri dreifingu](figs/uniform_comparison.jpg)
 
-Myndin sýnir *samanburð á stöplariti LCG og `runif()`* með yfirlagðri rauðri línu sem
+Myndin sýnir *samanburð á stöplariti LCG og `runif()`* með yfirlagðri línu sem
 sýnir fræðilega rétthyrnda dreifingu.
 
 ---
@@ -95,11 +100,11 @@ umbreytt í veldisdreifingu og borin saman við `rexp()`**.
 Myndin sýnir *samanburð á stöplariti LCG og `rexp()`*, þar sem rauða línan táknar
 fræðilega veldisdreifingu.
 
-
 ## Heimildir
+
 - **Law, A. M.** (2007). *Simulation Modeling and Analysis* (4th ed.). McGraw-Hill.
-- **Park, S. K., & Miller, K. W.** (1988). *Random number generators: Good ones are hard to find*. 
-  Communications of the ACM, 31(10), 1192-1201. https://doi.org/10.1145/63039.63042  
-- **Teukolsky, S. A., Flannery, B. P., Press, W., & Vetterling, W.** (1992). *Numerical Recipes in 
+- **Park, S. K., & Miller, K. W.** (1988). *Random number generators: Good ones are hard to find*.
+  Communications of the ACM, 31(10), 1192-1201. https://doi.org/10.1145/63039.63042
+- **Teukolsky, S. A., Flannery, B. P., Press, W., & Vetterling, W.** (1992). *Numerical Recipes in
   C*. SMR, 693(1), 59-70.
 - GNU C Library (glibc), rand() implementation. ISO C Standard.
