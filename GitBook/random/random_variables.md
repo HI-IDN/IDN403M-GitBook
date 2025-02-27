@@ -95,7 +95,7 @@ $$ X = -\frac{\ln U}{\lambda} $$
 R hefur innbyggt fall, `rexp()`, sem býr til veldisdreifð gögn. Til samanburðar var **LCG hendingum
 umbreytt í veldisdreifingu og borin saman við `rexp()`**.
 
-![Samanburður á veldisdreifingu](expon_comparison.jpg)
+![Samanburður á veldisdreifingu](figs/expon_comparison.jpg)
 
 Myndin sýnir *samanburð á stöplariti LCG og `rexp()`*, þar sem rauða línan táknar
 fræðilega veldisdreifingu.
