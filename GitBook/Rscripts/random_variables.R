@@ -135,3 +135,46 @@ p3 <- plot_grid(p3a, p3b, labels = c("A", "B"), ncol = 2)
 
 # Vista mynd í GitBook mappu
 ggsave('GitBook/random/figs/beta_rejection_comparison.jpg', plot = p3, width = 10, height = 4)
+
+# Box-Muller aðferð til að búa til slembigögn úr N(μ,σ²)
+box_muller_method <- function(n, mu, sigma){
+  n <- ceiling(n / 2)
+  U1 <- runif(n, 0, 1)
+  U2 <- runif(n, 0, 1)
+
+  # Umbreyting
+  Z1 <- sqrt(-2 * log(U1)) * cos(2 * pi * U2)
+  Z2 <- sqrt(-2 * log(U1)) * sin(2 * pi * U2)
+
+  return(c(Z1, Z2) * sigma + mu)
+}
+
+# Fjöldi slembigilda
+mu <- 5
+sigma <- 2
+set.seed(42)
+
+# Framleiða slembigögn með Box-Muller
+normal_samples_boxmuller <- box_muller_method(n, mu, sigma)
+
+# Framleiða slembigögn með innbyggða rnorm()
+normal_samples_rnorm <- rnorm(n, mean = mu, sd = sigma)
+
+# Búa til gögn fyrir samanburð
+normal_data <- data.frame(
+  value = c(normal_samples_boxmuller, normal_samples_rnorm),
+  method = rep(c("Box-Muller", "rnorm()"), each = n)
+)
+
+# Teikna histogram samanburð
+p4 <- ggplot(normal_data, aes(x = value, fill = method)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 50, alpha = 0.5, position = "identity") +
+  stat_function(fun = dnorm, args = list(mean = mu, sd = sigma), linewidth = 1, inherit.aes = FALSE) +
+  ggtitle("Samanburður á N(5,2²) úr Box-Muller og rnorm()") +
+  xlab("Gildi") +
+  ylab("Líkindi") +
+  theme_minimal() +
+  scale_fill_manual(values = c("blue", "red"))
+
+# Vista mynd í GitBook mappu
+ggsave('GitBook/random/figs/box_muller.jpg', plot=p4, width = 6, height = 4)

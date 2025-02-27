@@ -156,6 +156,10 @@ við sama bil. Höfnunarval virkar með því að:
 - Breytir tveimur jöfnum slembitölum í tvær normaldreifðar stærðir:
 
   $$ Z_1 = \sqrt{-2 \ln U_1} \cdot \cos(2\pi U_2) $$
+  og 
+  $$ Z_2 = \sqrt{-2 \ln U_1} \cdot \sin(2\pi U_2) $$
+
+þar sem $$ U_1, U_2 \sum \mathcal{U}[0,1] $$.
 
 📖 **Tilvísun**: Law (2007), kafli **8.2.3**
 
