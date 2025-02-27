@@ -60,8 +60,7 @@ eiginleikum* tryggir *löng tímabil og betri gæði slembitalna*.
 Jöfn dreifing (*continuous uniform distribution* eða *rectangular distribution*) lýsir sér þannig að
 öll gildi á ákveðnu bili eru jafn líkleg.
 
-LCG-aðferðin er oft notuð til að búa til hendingar sem fylgja **jöfnu dreifingu á bilinu $$[0,1]
-$$**.
+LCG-aðferðin er oft notuð til að búa til hendingar sem fylgja *jöfnu dreifingu á bilinu $$[0,1]$$*.
 Til að athuga hvort slembitalnaframleiðari virki rétt, má bera saman:
 
 - **LCG-framleiðslu á jöfnum hendingum** við
@@ -81,9 +80,7 @@ minnka með stærð gildisins*.
 
 Til að umbreyta jöfnum hendingum í veldisdreifingu er hægt að nota andhverfu-hlutafalls-aðferðina:
 
-$$
-X = -\frac{\ln U}{\lambda}
-$$
+$$ X = -\frac{\ln U}{\lambda} $$
 
 Þar sem:
 
@@ -105,3 +102,4 @@ fræðilega veldisdreifingu.
   Communications of the ACM, 31(10), 1192-1201. https://doi.org/10.1145/63039.63042  
 - **Teukolsky, S. A., Flannery, B. P., Press, W., & Vetterling, W.** (1992). *Numerical Recipes in 
   C*. SMR, 693(1), 59-70.
+- GNU C Library (glibc), rand() implementation. ISO C Standard.
