@@ -137,8 +137,8 @@ Beta dreifingar, er höfnunarval góð aðferð til að mynda hana.
 Hér notum við jafndreifða aðhvarfsdreifingu á bilinu $$[0,1]$$, því Beta dreifingin er bundin
 við sama bil. Höfnunarval virkar með því að:
 
-1. Velja slembigildi  $$U_1 $$ úr jafndreifingu á bilinu \([0,1]\) (kandidat).
-2. Velja annað slembigildi  $$U_2 $$ úr jafndreifingu á bilinu \([0, M]\), þar sem  $$M $$ er
+1. Velja slembigildi  $$U_1 $$ úr jafndreifingu á bilinu  $$[0,1] $$ (kandidat).
+2. Velja annað slembigildi  $$U_2 $$ úr jafndreifingu á bilinu  $$[0, M] $$, þar sem  $$M $$ er
    hámarksgildi þéttleikafallsins  $$f(x) $$ fyrir Beta(2,5).
 3. Ef  $$U_2 < f(U_1) $$, þá samþykkjum við  $$U_1 $$ sem gildi úr Beta(2,5) dreifingunni.
 4. Ef ekki, þá endurtökum við ferlið þar til nægileg mörg gildi hafa verið samþykkt.
@@ -159,7 +159,7 @@ við sama bil. Höfnunarval virkar með því að:
   og 
   $$ Z_2 = \sqrt{-2 \ln U_1} \cdot \sin(2\pi U_2) $$
 
-þar sem $$ U_1, U_2 \sum \mathcal{U}[0,1] $$.
+þar sem $$ U_1, U_2 \sim \mathcal{U}[0,1] $$.
 
 📖 **Tilvísun**: Law (2007), kafli **8.3.6**
 
