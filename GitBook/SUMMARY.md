@@ -39,8 +39,7 @@
 * [Hliðruð dreifing og áætlanir þegar gögn vantar](results_analysis/truncated_distributions.md)
 
 ## Slembitölur og slembitölugjafar
-* [Hendingar og LCG-aðferðin](random/random_variables.md)
-* [Slembibreytur og dreifingar](random/random_variates.md)
+* [Búa til hendingar frá grunni](random/random_variables.md)
 * [Prófun á slembitölum](random/random_number_testing.md)
 * [Strjálar dreifingar](random/discrete_random.md)
 
